@@ -9,7 +9,7 @@
  *
  * @license 2012 - MIT (http://couto.mit-license.org/)
  */
-define(['./MD5'], function (md5) {
+(function (w, d, undefined) {
 
     'use strict';
 
@@ -246,11 +246,11 @@ define(['./MD5'], function (md5) {
      *
      * @example
      *
-     * var coloredhash = new VisualHash(document.querySelectorAll('input')[0], {
+     * var coloredhash = new VisualHash(d.querySelectorAll('input')[0], {
      *     stripes      : 3,                        // default
      *     className    : 'visual-hasher'           // default
      *     stripesClass : 'visual-hasher-stripe'    // default
-     *     appendTo     : document.getElementById('color_placeholder'),
+     *     appendTo     : d.getElementById('color_placeholder'),
      *     onInput      : function() {
      *         console.log('A new color was typed')
      *     }
@@ -276,7 +276,7 @@ define(['./MD5'], function (md5) {
         this.inputEl = inputEl;
         this.options = (options) ? merge(options, this.defaults) : this.defaults;
 
-        this.container = document.createElement('div');
+        this.container = d.createElement('div');
         this.container.setAttribute('class', this.options.className);
 
         this.stripes = (function (placeholder, size, className) {
@@ -284,7 +284,7 @@ define(['./MD5'], function (md5) {
                 stripe;
 
             while (size) {
-                stripe = document.createElement('div');
+                stripe = d.createElement('div');
                 stripe.setAttribute('class', className + ' stripe-' + size);
                 stripes.push(stripe);
                 placeholder.appendChild(stripe);
@@ -316,7 +316,7 @@ define(['./MD5'], function (md5) {
          */
         defaults : {
             'stripes'       : 3,
-            'appendTo'      : document.body,
+            'appendTo'      : d.body,
             'className'     : 'visual-hasher',
             'stripesClass'  : 'visual-hasher-stripe'
         },
@@ -419,19 +419,15 @@ define(['./MD5'], function (md5) {
                 throw new Error('fillColors function must be called with colors parameter being of type Array');
             }
 
-            console.log(elements, colors);
             for (i; i >= 0; i -= 1) {
                 currentEl =  elements[i];
                 currentStyle = currentEl.getAttribute('style');
-                console.log(elements, colors)
 
                 if (currentStyle) {
-                    console.log(currentStyle)
                     splittedStyle = currentStyle.split(/(\;|:)/gi);
                     splittedIdx = indexOf(splittedStyle, 'background-color');
 
                     if (splittedIdx !== -1) {
-                        console.log(splittedIdx)
                         splittedStyle[splittedIdx + 2] = '#' + colors[i];
                     } else {
                         splittedStyle[splittedStyle.length] = ';background-color: #' + colors[i] + ';';
@@ -557,6 +553,14 @@ define(['./MD5'], function (md5) {
         }
     };
 
+    if (typeof define === "function" && define.amd) {
+        define("VisualHash", [], function () { return VisualHash; } );
+    } else if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.exports) {
+        module.exports = VisualHash;
+    } else {
+        w.VisualHash = VisualHash;
+    }
+
     return VisualHash;
 
-});
+}(window, document));

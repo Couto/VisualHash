@@ -1,0 +1,27 @@
+# Node
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+node_modules
+
+# Vim
+.*.sw[a-z]
+*.un~
+Session.vim
+
+# Textmate
+*.tmproj
+*.tmproject
+tmtags
+
+# OSX
+.DS_Store
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes

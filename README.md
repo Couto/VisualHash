@@ -10,6 +10,14 @@ _(Coming soon)_
 ## Examples
 _(Coming soon)_
 
+## Running Tests
+Right now to run tests, you need to have [node](https://github.com/joyent/node) installed
+as well as the following packages (inside the `tests` folder):
+
+* [mocha](https://github.com/visionmedia/mocha) `npm install mocha`
+* [chai](https://github.com/logicalparadox/chai/) `npm install chai`
+* [jsdom](https://github.com/tmpvar/jsdom) `npm install jsdom`
+
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding
 style. Add unit tests for any new or changed functionality. Lint and test your
@@ -22,5 +30,5 @@ automatically. You'll find source code in the "src" subdirectory!_
 _(Nothing yet)_
 
 ## License
-Copyright (c) 2012 Luís Couto  
+Copyright (c) 2012 Luís Couto
 Licensed under the [MIT License](http://couto.mit-license.org)
