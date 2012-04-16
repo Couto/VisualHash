@@ -1,14 +1,113 @@
+/**
+ * VisualHash
+ *
+ * @author Luis Couto
+ * @organization 15minuteslate.net
+ * @contact couto@15minuteslate.net
+ * @version 0.0.1
+ * @requires MD5
+ *
+ * @license 2012 - MIT (http://couto.mit-license.org/)
+ */
 define(['./MD5'], function (md5) {
 
     'use strict';
 
-    function isElement(obj) { return !!(obj && obj.nodeType === 1); }
+    /**
+     * is - a Set of validation functions
+     *
+     * @class
+     * @private
+     */
+    var is = {
+        tester : Object.prototype.toString,
+        /**
+         * element
+         * tests if value given is a DOM Element
+         *
+         * @static
+         * @param {String|Object|Array|Boolean|Number} obj
+         * @returns Boolean
+         */
+        element : function (obj) { return !!(obj && obj.nodeType === 1); },
 
-    function isObject(obj) { return obj === new Object(obj); }
+        /**
+         * object
+         * tests if value given is Object
+         *
+         * @static
+         * @param {String|Object|Array|Boolean|Number} obj
+         * @returns Boolean
+         */
+        object : function (obj) { return obj === new Object(obj); },
 
+        /**
+         * array
+         * tests if value given is Array
+         *
+         * @static
+         * @param {String|Object|Array|Boolean|Number} obj
+         * @returns Boolean
+         */
+        array : function (obj) {
+            return (this.tester.call(obj) === '[object Array]');
+        },
+
+
+        /**
+         * func
+         * tests if value given is Function
+         *
+         * @static
+         * @param {String|Object|Array|Boolean|Number} obj
+         * @returns Boolean
+         */
+        func : function (obj) {
+            return (this.tester.call(obj) === '[object Function]');
+        },
+
+        /**
+         * string
+         * tests if value given is String
+         *
+         * @static
+         * @param {String|Object|Array|Boolean|Number} obj
+         * @returns Boolean
+         */
+        string : function (obj) {
+            return (this.tester.call(obj) === '[object String]');
+        },
+
+        /**
+         * number
+         * tests if value given is Number
+         *
+         * @static
+         * @param {String|Object|Array|Boolean|Number} obj
+         * @returns Boolean
+         */
+        number : function (obj) {
+            return (this.tester.call(obj) === '[object Number]');
+        }
+    };
+
+    /**
+     * merge
+     * Merges to objects into one.
+     * Doesn't overwrite existing properties
+     * Changes apply directly to target object.
+     *
+     * @private
+     * @param {Object} target Object that will receive the new properties
+     * @param {Object} source Object that will give its properties
+     * @returns Object
+     */
     function merge(target, source) {
         var k;
 
+        if (!is.object(target) || !is.object(source)) {
+            throw new Error('Argument given must be of type Object');
+        }
 
         for (k in source) {
             if (source.hasOwnProperty(k) && !target[k]) {
@@ -19,20 +118,28 @@ define(['./MD5'], function (md5) {
         return target;
     }
 
+    /**
+     * bind
+     * Fixes the context for the given function
+     *
+     * @private
+     * @param {Function} fn function whom context will be fixed
+     * @param {Object} context object that will serve as context
+     * @returns a function with the given context
+     */
     function bind(fn, context) {
-        var isType = Object.prototype.toString,
-            slice = Array.prototype.slice,
+        var slice = Array.prototype.slice,
             tmp,
             args,
             proxy;
 
-        if (isType.call(context) === '[object String]') {
+        if (is.string(context)) {
             tmp = fn[context];
             context = fn;
             fn = tmp;
         }
 
-        if (isType.call(fn) !== '[object Function]') {
+        if (!is.func(fn)) {
             return undefined;
         }
 
@@ -43,29 +150,90 @@ define(['./MD5'], function (md5) {
 
         return proxy;
     }
+    /**
+     * addEvent
+     * cross-browser addEvent function
+     *
+     * @private
+     * @param {DOM Elment} elm DOM Element to attach the event listener
+     * @param {String} evType event name that it's going to be attached
+     * @param {Function} fn Function that will serve as callback
+     * @returns undefined
+     */
+    function addEvent(elm, evType, fn) {
+        if (!is.element(elm)) {
+            throw new Error('addEvent requires elm parameter to be a DOM Element');
+        }
 
-    function addEvent(elm, evType, fn, useCapture) {
+        if (!is.string(evType)) {
+            throw new Error('addEvent requires evTtype parameter to be a String');
+        }
+
+        if (!is.func(fn)) {
+            throw new Error('addEvent requires evTtype parameter to be a Function');
+        }
+
         if (elm.addEventListener) {
-            elm.addEventListener(evType, fn, useCapture);
-            return true;
+            elm.addEventListener(evType, fn);
         } else if (elm.attachEvent) {
-            var r = elm.attachEvent('on' + evType, fn);
-            return r;
+            elm.attachEvent('on' + evType);
         } else {
             elm['on' + evType] = fn;
         }
     }
+    /**
+     * removeEvent
+     * cross-browser removeEvent function
+     *
+     * @private
+     * @param {DOM Elment} elm DOM Element that has the listener attached
+     * @param {String} evType event name that was attached
+     * @param {Function} fn Function that served as callback
+     * @returns true || handler
+     */
+    function removeEvent(elm, evType, fn) {
 
-    function removeEvent(elm, evType, fn, useCapture) {
+        if (!is.element(elm)) {
+            throw new Error('removeEvent requires elm parameter to be a DOM Element');
+        }
+
+        if (!is.string(evType)) {
+            throw new Error('removeEvent requires evTtype parameter to be a String');
+        }
+
+        if (!is.func(fn)) {
+            throw new Error('removeEvent requires evTtype parameter to be a Function');
+        }
+
+
         if (elm.removeEventListener) {
-            elm.removeEventListener(evType, fn, useCapture);
-            return true;
+            elm.removeEventListener(evType, fn);
         } else if (elm.detachEvent) {
-            var r = elm.detachEvent('on' + evType, fn);
-            return r;
+            elm.detachEvent('on' + evType, fn);
         } else {
             elm['on' + evType] = null;
         }
+    }
+
+    /**
+     * indexOf
+     * given an array, it will search for the string value.
+     * if the browser supports indexOf on arrays it will use the browser version
+     * instead
+     *
+     * @public
+     * @param {Array} arr Array where to find the string
+     * @param {String|Number|Boolean} val value to search for
+     * @returns -1 if not found, index position otherwise
+     */
+    function indexOf(arr, val) {
+        var i = arr.length - 1;
+
+        if (Array.prototype.indexOf) { return arr.indexOf(val); }
+
+        for (i; i >= 0; i -= 1) { if (arr[i] === val) { return i; } }
+
+        return -1;
     }
 
     /**
@@ -92,13 +260,21 @@ define(['./MD5'], function (md5) {
      */
     function VisualHash(inputEl, options) {
 
-        if (!inputEl || !isElement) {
+        // Ensure that the function is called as a constructor
+        if (!(this instanceof VisualHash)) {
+            return new VisualHash(inputEl, options);
+        }
+
+        if (!inputEl || !is.element(inputEl)) {
             throw new Error('VisualHash constructor needs at least one argument and has to be a DOM element');
         }
 
+        if (options && !is.object(options)) {
+            throw new Error('VisualHash requires the options parameter to be of type object');
+        }
 
         this.inputEl = inputEl;
-        this.options = (options && isObject(options)) ? merge(options, this.defaults) : this.defaults;
+        this.options = (options) ? merge(options, this.defaults) : this.defaults;
 
         this.container = document.createElement('div');
         this.container.setAttribute('class', this.options.className);
@@ -124,15 +300,21 @@ define(['./MD5'], function (md5) {
         this.inputHandler = bind(this.inputHandler, this);
         addEvent(this.inputEl, 'input', this.inputHandler);
 
-        if (this.options.appendTo && isElement(this.options.appendTo)) {
-            this.append();
-        }
+        if (this.options.appendTo) { this.append(); }
     }
 
     VisualHash.prototype = {
 
+        /**
+         * @constructor
+         * Set the constructor property back to the correct Function
+         */
         constructor : VisualHash,
 
+        /**
+         * @property {Object} defaults
+         * @readonly
+         */
         defaults : {
             'stripes'       : 3,
             'appendTo'      : document.body,
@@ -140,18 +322,51 @@ define(['./MD5'], function (md5) {
             'stripesClass'  : 'visual-hasher-stripe'
         },
 
+        /**
+         * toHash
+         * Given a string it uses MD5 to return a hash
+         *
+         * @method
+         * @public
+         * @param {String} str String to be converted to hash
+         * @returns {String} Hashed value of the given string
+         */
         toHash : function (str) {
+            if (!is.string(str)) {
+                throw new Error('toHash function must be called with a parameter of type String');
+            }
             return md5(str);
         },
 
-        splitHash : function (hash, size, chunks) {
+        /**
+         * split
+         * Given a string it, will split in the given amount of chunks with the given size
+         *
+         * @method
+         * @public
+         * @param {String} str String to be splitted
+         * @returns {Array} Array with the splitted string
+         */
+        split : function (str, size, chunks) {
             var parts = [],
                 begin = 0,
                 end = size,
                 interval = size;
 
+            if (!is.string(str)) {
+                throw new Error('split function must be called with str parameter being of type String');
+            }
+
+            if (!is.number(size)) {
+                throw new Error('split function must be called with size parameter being of type Number');
+            }
+
+            if (!is.number(chunks)) {
+                throw new Error('split function must be called with chunks parameter being of type Number');
+            }
+
             while (chunks) {
-                parts.push(hash.substring(begin, end));
+                parts.push(str.substring(begin, end));
 
                 begin = end + 1;
                 end = end + interval + 1;
@@ -162,49 +377,151 @@ define(['./MD5'], function (md5) {
             return parts;
         },
 
+        /**
+         * fillColors
+         * Given an array or array-like of elements and an array of colors,
+         * it will set the background-color of each elements with the
+         * respective color.
+         *
+         * @method
+         * @public
+         * @param {Array} elements Array of node Elements
+         * @param {Array} colors Array of colors
+         * @returns VisualHash instance (this)
+         */
         fillColors : function (elements, colors) {
+            var i = elements.length - 1,
+                currentStyle = "",
+                currentEl,
+                splittedStyle = [],
+                splittedIdx = 0;
 
-            var i = elements.length - 1;
+            if (!is.array(elements)) {
+                throw new Error('fillColors function must be called with elements parameter being of type Array or Static Node');
+            }
 
-            while (i >= 0) {
-                elements[i].setAttribute('style', 'background-color: #' + colors[i]);
-                i -= 1;
+            if (!is.array(colors)) {
+                throw new Error('fillColors function must be called with colors parameter being of type Array');
+            }
+
+            console.log(elements, colors);
+            for (i; i >= 0; i -= 1) {
+                currentEl =  elements[i];
+                currentStyle = currentEl.getAttribute('style');
+                console.log(elements, colors)
+
+                if (currentStyle) {
+                    console.log(currentStyle)
+                    splittedStyle = currentStyle.split(/(\;|:)/gi);
+                    splittedIdx = indexOf(splittedStyle, 'background-color');
+
+                    if (splittedIdx !== -1) {
+                        console.log(splittedIdx)
+                        splittedStyle[splittedIdx + 2] = '#' + colors[i];
+                    } else {
+                        splittedStyle[splittedStyle.length] = ';background-color: #' + colors[i] + ';';
+                    }
+
+                    currentEl.setAttribute('style', splittedStyle.join(''));
+                } else {
+                    currentEl.setAttribute('style', 'background-color: #' + colors[i] + ';');
+                }
             }
 
             return this;
 
         },
 
+        /**
+         * clearColors
+         * Given an array or array-like of elements it will remove the
+         * background-color property of the its style attribute
+         *
+         * @method
+         * @public
+         * @param {Array} elements Array of node Elements
+         * @returns VisualHash instance (this)
+         */
         clearColors : function (elements) {
+            var i = elements.length - 1,
+                currentStyle = "",
+                currentEl,
+                splittedStyle = [],
+                splittedIdx = 0;
 
-            var i = elements.length - 1;
+            if (!is.array(elements)) {
+                throw new Error('clearColors function must be called with elements parameter being of type Array or Static Node');
+            }
 
-            while (i) {
-                elements[i].setAttribute('style', null);
-                i -= 1;
+            for (i; i >= 0; i -= 1) {
+                currentEl = elements[i];
+                currentStyle = currentEl.getAttribute('style');
+
+                if (currentStyle) {
+                    splittedStyle = currentStyle.split(/(\;|:)/gi);
+                    splittedIdx = indexOf(splittedStyle, 'background-color');
+
+                    if (splittedIdx !== -1) {
+                        // It's faster than another loop
+                        // and since are just a few lines is still managable
+                        splittedStyle[splittedIdx] = "";
+                        splittedStyle[splittedIdx + 1] = "";
+                        splittedStyle[splittedIdx + 2] = "";
+                        splittedStyle[splittedIdx + 3] = "";
+                        currentEl.setAttribute('style', splittedStyle.join(''));
+                    }
+                }
             }
 
             return this;
         },
 
+        /**
+         * append
+         * Appends the VisualHash element inside the given element, if no element
+         * is given it fallbacks to the options property (that ultimately gets
+         * its value from the defaults property)
+         *
+         * @method
+         * @public
+         * @param {DOM Element} element Element where the VisualHash will be appended
+         * @returns VisualHash instance (this)
+         */
         append : function (element) {
-            if (isElement(element)) { this.options.appendTo = element; }
-
-            if (this.options.appendTo) {
-                this.options.appendTo.appendChild(this.container);
-            }
+            if (!element) { element = this.options.appendTo; }
+            if (!is.element(element)) { throw new Error('append function must be called with element parameter being of type Element or an Element must be given in the constructor options'); }
+            if (element) { element.appendChild(this.container); }
 
             return this;
         },
 
+        /**
+         * destroy
+         * Removes all event listeners used by the VisualHash, and removes the
+         * DOM element created
+         *
+         * @method
+         * @public
+         * @returns undefined
+         */
         destroy : function () {
             removeEvent(this.inputEl, 'input', this.inputHandler);
             this.container.parentNode.removeChild(this.container);
             this.container = null;
             this.stripes = null;
             this.inputEl = null;
+            this.options = null;
         },
 
+        /**
+         * inputHandler
+         * Handler used when a new input is given in the inputbox
+         * Calls the onInput handler if given
+         *
+         * @method
+         * @protected
+         * @returns undefined
+         */
         inputHandler : function (evt) {
             var str = evt.target.value,
                 hash = "",
@@ -212,7 +529,7 @@ define(['./MD5'], function (md5) {
 
             if (str) {
                 hash = this.toHash(str);
-                splittedHash = this.splitHash(hash, 6, this.options.stripes);
+                splittedHash = this.split(hash, 6, this.options.stripes);
                 this.fillColors(this.stripes, splittedHash);
             } else {
                 this.clearColors(this.stripes);
@@ -224,15 +541,6 @@ define(['./MD5'], function (md5) {
 
         }
     };
-
-    if (window.jQuery) {
-        jQuery.fn.visualHash = function (options) {
-            return $(this).each(function () {
-                var $this = $(this);
-                $this.data('visualHash', new VisualHash($this.get(0), options));
-            });
-        };
-    }
 
     return VisualHash;
 
