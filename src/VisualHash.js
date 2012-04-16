@@ -21,6 +21,32 @@
      */
     var is = {
         tester : Object.prototype.toString,
+        
+        /**
+         * func
+         * tests if value given is Function
+         *
+         * @static
+         * @param {String|Object|Array|Boolean|Number} obj
+         * @returns Boolean
+         */
+        func : function (obj) {
+            return (this.tester.call(obj) === '[object Function]');
+        },
+        
+        /**
+         * string
+         * tests if value given is String
+         *
+         * @static
+         * @param {String|Object|Array|Boolean|Number} obj
+         * @returns Boolean
+         */
+        string : function (obj) {
+            return (this.tester.call(obj) === '[object String]');
+        },
+        
+        //>ExcludeStart('validation')
         /**
          * element
          * tests if value given is a DOM Element
@@ -53,31 +79,6 @@
             return (this.tester.call(obj) === '[object Array]');
         },
 
-
-        /**
-         * func
-         * tests if value given is Function
-         *
-         * @static
-         * @param {String|Object|Array|Boolean|Number} obj
-         * @returns Boolean
-         */
-        func : function (obj) {
-            return (this.tester.call(obj) === '[object Function]');
-        },
-
-        /**
-         * string
-         * tests if value given is String
-         *
-         * @static
-         * @param {String|Object|Array|Boolean|Number} obj
-         * @returns Boolean
-         */
-        string : function (obj) {
-            return (this.tester.call(obj) === '[object String]');
-        },
-
         /**
          * number
          * tests if value given is Number
@@ -89,6 +90,7 @@
         number : function (obj) {
             return (this.tester.call(obj) === '[object Number]');
         }
+        //>ExcludeEnd('validation')
     };
 
     /**
@@ -104,11 +106,13 @@
      */
     function merge(target, source) {
         var k;
-
+        
+        //>ExcludeStart('validation')
         if (!is.object(target) || !is.object(source)) {
             throw new Error('Argument given must be of type Object');
         }
-
+        //>ExcludeEnd('validation')
+        
         for (k in source) {
             if (source.hasOwnProperty(k) && !target[k]) {
                 target[k] = source[k];
@@ -161,6 +165,7 @@
      * @returns undefined
      */
     function addEvent(elm, evType, fn) {
+        //>ExcludeStart('validation')
         if (!is.element(elm)) {
             throw new Error('addEvent requires elm parameter to be a DOM Element');
         }
@@ -172,7 +177,8 @@
         if (!is.func(fn)) {
             throw new Error('addEvent requires evTtype parameter to be a Function');
         }
-
+        //>ExcludeEnd('validation')
+        
         if (elm.addEventListener) {
             elm.addEventListener(evType, fn);
         } else if (elm.attachEvent) {
@@ -192,7 +198,8 @@
      * @returns true || handler
      */
     function removeEvent(elm, evType, fn) {
-
+        
+        //>ExcludeStart('validation')
         if (!is.element(elm)) {
             throw new Error('removeEvent requires elm parameter to be a DOM Element');
         }
@@ -204,7 +211,7 @@
         if (!is.func(fn)) {
             throw new Error('removeEvent requires evTtype parameter to be a Function');
         }
-
+        //>ExcludeEnd('validation')
 
         if (elm.removeEventListener) {
             elm.removeEventListener(evType, fn);
@@ -261,6 +268,7 @@
     function VisualHash(inputEl, options) {
 
         // Ensure that the function is called as a constructor
+        //>ExcludeStart('validation')
         if (!(this instanceof VisualHash)) {
             return new VisualHash(inputEl, options);
         }
@@ -272,7 +280,8 @@
         if (options && !is.object(options)) {
             throw new Error('VisualHash requires the options parameter to be of type object');
         }
-
+        //>ExcludeEnd('validation')
+        
         this.inputEl = inputEl;
         this.options = (options) ? merge(options, this.defaults) : this.defaults;
 
@@ -337,11 +346,12 @@
                     return Number(parseInt(str, 16)*12345).toString(16);
                 };
 
-
-            // if (!is.string(str)) {
-            //     throw new Error('toHash function must be called with a parameter of type String');
-            // }
-
+            //>ExcludeStart('validation')
+            if (!is.string(str)) {
+                throw new Error('toHash function must be called with a parameter of type String');
+            }
+            //>ExcludeEnd('validation')
+            
             output += convert(str);
 
             // Fill with trash
@@ -367,7 +377,8 @@
                 begin = 0,
                 end = size,
                 interval = size;
-
+                
+            //>ExcludeStart('validation')
             if (!is.string(str)) {
                 throw new Error('split function must be called with str parameter being of type String');
             }
@@ -379,7 +390,8 @@
             if (!is.number(chunks)) {
                 throw new Error('split function must be called with chunks parameter being of type Number');
             }
-
+            //>ExcludeEnd('validation')
+            
             while (chunks) {
                 parts.push(str.substring(begin, end));
 
@@ -410,7 +422,8 @@
                 currentEl,
                 splittedStyle = [],
                 splittedIdx = 0;
-
+            
+            //>ExcludeStart('validation')
             if (!is.array(elements)) {
                 throw new Error('fillColors function must be called with elements parameter being of type Array or Static Node');
             }
@@ -418,6 +431,7 @@
             if (!is.array(colors)) {
                 throw new Error('fillColors function must be called with colors parameter being of type Array');
             }
+            //>ExcludeEnd('validation')
 
             for (i; i >= 0; i -= 1) {
                 currentEl =  elements[i];
@@ -459,11 +473,13 @@
                 currentEl,
                 splittedStyle = [],
                 splittedIdx = 0;
-
+                
+            //>ExcludeStart('validation')
             if (!is.array(elements)) {
                 throw new Error('clearColors function must be called with elements parameter being of type Array or Static Node');
             }
-
+            //>ExcludeEnd('validation')
+            
             for (i; i >= 0; i -= 1) {
                 currentEl = elements[i];
                 currentStyle = currentEl.getAttribute('style');
@@ -500,9 +516,11 @@
          */
         append : function (element) {
             if (!element) { element = this.options.appendTo; }
+            //>ExcludeStart('validation')
             if (!is.element(element)) { throw new Error('append function must be called with element parameter being of type Element or an Element must be given in the constructor options'); }
+            //>ExcludeEnd('validation')
             if (element) { element.appendChild(this.container); }
-
+            
             return this;
         },
 
