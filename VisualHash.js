@@ -284,7 +284,6 @@ define(['./MD5'], function (md5) {
                 stripe;
 
             while (size) {
-
                 stripe = document.createElement('div');
                 stripe.setAttribute('class', className + ' stripe-' + size);
                 stripes.push(stripe);
@@ -324,18 +323,34 @@ define(['./MD5'], function (md5) {
 
         /**
          * toHash
-         * Given a string it uses MD5 to return a hash
-         *
+         * Given a string awkawardly converts to a Hex number
+         * @TODO Check with big numbers/strings
          * @method
          * @public
          * @param {String} str String to be converted to hash
          * @returns {String} Hashed value of the given string
          */
         toHash : function (str) {
-            if (!is.string(str)) {
-                throw new Error('toHash function must be called with a parameter of type String');
+            var output = "",
+                counter = 0,
+                convert = function (str) {
+                    return Number(parseInt(str, 16)*12345).toString(16);
+                };
+
+
+            // if (!is.string(str)) {
+            //     throw new Error('toHash function must be called with a parameter of type String');
+            // }
+
+            output += convert(str);
+
+            // Fill with trash
+            while (output.length < 40) {
+                output += convert("" + (output.charCodeAt(counter) * Math.floor(output.length/3)));
+                counter += 1;
             }
-            return md5(str);
+
+            return output;
         },
 
         /**
