@@ -32,7 +32,7 @@ _Also, please don't edit files in the "dist" subdirectory as they are generated
 automatically. You'll find source code in the "src" subdirectory!_
 
 ## TODO
-* Make Makefile to run tests, minify and create dist files.
+* ~~Make Makefile to run tests, minify and create dist files.~~ ✓
 * Finish tests
 * Fix JSCoverage to better replicate the script usage
 * Write default CSS
