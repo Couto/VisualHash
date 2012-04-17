@@ -37,4 +37,6 @@ src-cov: cov-clean
 cov-clean:
 	@rm -rf $(COVERAGE)
 
+#(\/\/\>ExcludeStart\(\')(\w*)(\'\))
+
 .PHONY: clean cov-clean src-cov test-cov test dist
