@@ -12,6 +12,12 @@ test:
 		-R $(REPORTER) \
 		$(TESTS)/index.js
 
+test-watch: 
+	@./tests/node_modules/mocha/bin/mocha \
+		-R $(REPORTER) \
+		--watch \
+		$(TESTS)/index.js
+
 test-browser:
 	@open $(TESTS)/index.html
 

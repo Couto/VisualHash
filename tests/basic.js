@@ -33,7 +33,7 @@
             var placeholder = document.createElement('div'),
                 visualHash = new VisualHash(placeholder);
 
-            expect(visualHash instanceof VisualHash).to.be.true;
+            expect(visualHash).to.be.instanceOf(VisualHash);
         });
 
     });
