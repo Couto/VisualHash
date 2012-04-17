@@ -20,7 +20,7 @@ as well as the following packages (inside the `tests` folder):
 
 Then either open the
 [index.html](https://github.com/Couto/VisualHash/blob/master/tests/index.html)
-in your browser window or run `make test` ou `make test-browser` in your terminal from the root folder.
+in your browser window or run `make test` or `make test-browser` in your terminal from the root folder.
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding
