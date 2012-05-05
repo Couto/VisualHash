@@ -1,4 +1,7 @@
-/**
+/*jslint browser: true, indent: 4 */
+/*global Sha1, md5, Crypto, module, exports, define*/
+
+/*!
  * VisualHash
  *
  * @author Luis Couto
@@ -9,7 +12,7 @@
  *
  * @license 2012 - MIT (http://couto.mit-license.org/)
  */
-(function (w, d, undefined) {
+(function (w, d) {
 
     'use strict';
 
@@ -65,7 +68,9 @@
          * @param {String|Object|Array|Boolean|Number} obj
          * @returns Boolean
          */
-        object : function (obj) { return obj === new Object(obj); },
+        object : function (obj) {
+            return this.tester.call(obj) === '[object Object]';
+        },
 
         /**
          * array
@@ -133,26 +138,16 @@
      */
     function bind(fn, context) {
         var slice = Array.prototype.slice,
-            tmp,
-            args,
-            proxy;
-
-        if (is.string(context)) {
-            tmp = fn[context];
-            context = fn;
-            fn = tmp;
-        }
+            args;
 
         if (!is.func(fn)) {
             return undefined;
         }
 
         args = slice.call(arguments, 2);
-        proxy = function () {
+        return function () {
             return fn.apply(context, args.concat(slice.call(arguments)));
         };
-
-        return proxy;
     }
     /**
      * addEvent
@@ -357,15 +352,15 @@
         toHash : function (str) {
 
             if (this.options.hashFunction) {
-                return  this.options.hashFunction(str);
+                return this.options.hashFunction(str);
             }
 
             if (Sha1 && is.Function(Sha1.hash)) { return Sha1.hash(str); }
-            if (md5 && isFunction(md5)) { return md5(str); }
-            if (Crypto && isObject(Crypto)) {
-                if (Crypto.MD5 && isFunction(Crypto.MD5)) { return Crypto.MD5(str); }
-                if (Crypto.SHA1 && isFunction(Crypto.SHA1)) { return Crypto.SHA1(str); }
-                if (Crypto.SHA256 && isFunction(Crypto.SHA256)) { return Crypto.MD5(str); }
+            if (md5 && is.func(md5)) { return md5(str); }
+            if (Crypto && is.object(Crypto)) {
+                if (Crypto.MD5 && is.func(Crypto.MD5)) { return Crypto.MD5(str); }
+                if (Crypto.SHA1 && is.func(Crypto.SHA1)) { return Crypto.SHA1(str); }
+                if (Crypto.SHA256 && is.func(Crypto.SHA256)) { return Crypto.MD5(str); }
             }
 
         },
@@ -562,7 +557,7 @@
 
             var str = evt.target.value,
                 hash = '',
-                splittedHash = [],
+                splittedHash = [];
 
             if (str) {
                 hash = this.toHash(str);
@@ -578,7 +573,7 @@
     };
 
     if (typeof define === 'function' && define.amd) {
-        define('VisualHash', [], function () { return VisualHash; } );
+        define('VisualHash', [], function () { return VisualHash; });
     } else if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.exports) {
         module.exports = VisualHash;
     } else {
