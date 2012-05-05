@@ -1,0 +1,21 @@
+/*!
+ * VisualHash
+ *
+ * @author Luis Couto
+ * @organization 15minuteslate.net
+ * @contact couto@15minuteslate.net
+ * @version 0.0.1
+ *
+ * @license 2012 - MIT (http://couto.mit-license.org/)
+ */
+.visual-hasher {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+
+.visual-hasher-stripe {
+    display: inline-block;
+    width: 33%;
+    height: 100%;
+}

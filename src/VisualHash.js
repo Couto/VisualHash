@@ -8,7 +8,6 @@
  * @organization 15minuteslate.net
  * @contact couto@15minuteslate.net
  * @version 0.0.1
- * @requires MD5
  *
  * @license 2012 - MIT (http://couto.mit-license.org/)
  */
