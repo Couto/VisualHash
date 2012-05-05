@@ -1,13 +1,5 @@
 var jsdom = require('jsdom').jsdom,
-    fs = require('fs'),
-    blacklistFiles = [
-        'index.js', 
-        'index.html', 
-        'node_modules', 
-        'coverage',
-        'coverage.html',
-        'VisualHash.js'
-    ];
+    fs = require('fs');
 
 // Recreate browser variables
 // yes. I know global variables are bad.
@@ -16,13 +8,7 @@ global.document = jsdom('<html><body></body></html>');
 global.window = document.createWindow();
 window.VisualHash = VisualHash = require(__dirname + '/coverage/VisualHash');
 
-fs.readdir(__dirname, function (err, files) {
-    if (err) { throw new Error(err); }
-    else {
-        files.forEach(function (val) {
-            if (blacklistFiles.indexOf(val) === -1) {
-               require(__dirname + '/' + val)
-            }
-        });
-    }
+var files = fs.readdirSync(__dirname + '/tests');
+files.forEach(function (val) {
+    require(__dirname + '/tests/' + val)
 });

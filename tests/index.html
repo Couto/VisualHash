@@ -6,9 +6,11 @@
     <script src="node_modules/mocha/mocha.js"></script>
     <script>mocha.setup('bdd')</script>
     <script src="node_modules/chai/chai.js"></script>
+    <script src="http://sinonjs.org/releases/sinon-1.3.4.js"></script>
     <script src="coverage/VisualHash.js"></script>
-    <script src="basic.js"></script>
-    <script src="instantiation.js"></script>
+    <script src="tests/basic.js"></script>
+    <script src="tests/instantiation.js"></script>
+    <script src="tests/private.js"></script>
     <script>
         window.onload = function(){
             mocha.run();

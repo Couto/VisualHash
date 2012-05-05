@@ -12,7 +12,7 @@ test:
 		-R $(REPORTER) \
 		$(TESTS)/index.js
 
-test-watch: 
+test-watch:
 	@./tests/node_modules/mocha/bin/mocha \
 		-R $(REPORTER) \
 		--watch \
@@ -41,9 +41,7 @@ src-cov: cov-clean
 	@node-jscoverage -v $(SRC_FOLDER) $(COVERAGE)
 
 cov-clean:
+	@rm -f $(TESTS)/coverage.html
 	@rm -rf $(COVERAGE)
-
-#(\/\/\>ExcludeStart\(\')(\w*)(\'\))
-#(\/\/\<)(\w*)(\>)((.|\s)*)(\/\/\<\/)(\w*)(\>)
 
 .PHONY: clean cov-clean src-cov test-cov test dist

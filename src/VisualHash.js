@@ -269,7 +269,7 @@
         }
 
         // yeah... predicting a lot of people passing a jQuery object
-        if (inputEl.jquery) { inputEl = inputEl.get(0); }
+        if (inputEl && inputEl.jquery) { inputEl = inputEl.get(0); }
 
         if (!inputEl || !is.element(inputEl)) {
             throw new Error('VisualHash constructor needs at least one argument and has to be a DOM element');
