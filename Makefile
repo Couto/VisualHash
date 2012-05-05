@@ -2,8 +2,8 @@ REPORTER = list
 SRC_FOLDER = src/
 SRC = $(shell find $(SRC_FOLDER) -name "*.js" -type f)
 DIST = dist/VisualHash.min.js
-TESTS = tests/
-COVERAGE = $(TESTS)/coverage/
+TESTS = tests
+COVERAGE = $(TESTS)/coverage
 
 all : test test-cov dist
 
@@ -28,20 +28,20 @@ dist: clean
 		--verbose \
 		--unsafe \
 		--lift-vars \
-		--output $(DIST) \
-		$(SRC)
+		--output $(DIST) $(SRC)
 
 clean:
 	@rm -rf dist/*
 
 test-cov: src-cov
+	@touch $(TESTS)/coverage.html
 	@ $(MAKE) test REPORTER=html-cov > $(TESTS)/coverage.html
 
 src-cov: cov-clean
-	@node-jscoverage -v $(SRC_FOLDER) $(COVERAGE)
+	@node-jscoverage -v $(SRC_FOLDER) $(COVERAGE) --exclude=/css
 
 cov-clean:
-	@rm -f $(TESTS)/coverage.html
+	@rm -rf $(TESTS)/coverage.html
 	@rm -rf $(COVERAGE)
 
 .PHONY: clean cov-clean src-cov test-cov test dist
