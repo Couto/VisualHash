@@ -1,6 +1,17 @@
 # VisualHash
+Translates an `<input>` value to a collection of colors
 
-Converts the data inside an input element to colors
+## Dependencies
+VisualHash depends on a external hash implementation.
+At the moment it will try to find an use automatically, any of the following implementations:
+
+* [Chris Veness' SHA1 Implementation](http://www.movable-type.co.uk/scripts/sha1.html)
+* [Joseph Myers' MD5 Implementation](http://www.myersdaily.org/joseph/javascript/md5-text.html)
+* [Jeff Mott's Crypto-js Collection](http://code.google.com/p/crypto-js/) __note__ that it only finds for Crypto.MD5, Crypto.SHA1 and Crypto.SHA256
+
+Also, you're not forced to use any of this implementations, VisualHash accepts an option of `hashFunction` 
+where you're free to use any hashing implementation, as long as your function accepts a string as first argument
+and returns a hash.
 
 ## Getting Started
 
@@ -35,9 +46,6 @@ automatically. You'll find source code in the "src" subdirectory!_
 * Finish tests
 * Fix JSCoverage to better replicate the script usage
 * Write default CSS
-
-## Release History
-_(Nothing yet)_
 
 ## License
 Copyright (c) 2012 Luís Couto
