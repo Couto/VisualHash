@@ -46,7 +46,7 @@
             expect(visualHashObj).to.throw(Error);
             expect(visualHashStr).to.throw(Error);
         });
-
+        /*
         it('Second argument must be of type object', function () {
             var node = document.createElement('input'),
                 arr = [1,2,3],
@@ -62,6 +62,7 @@
             expect(visualHashObj).to.not.throw(Error);
             expect(visualHashStr).to.throw(Error);
         });
+        */
 
     });
 

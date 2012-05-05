@@ -21,7 +21,7 @@
      */
     var is = {
         tester : Object.prototype.toString,
-        
+
         /**
          * func
          * tests if value given is Function
@@ -33,7 +33,7 @@
         func : function (obj) {
             return (this.tester.call(obj) === '[object Function]');
         },
-        
+
         /**
          * string
          * tests if value given is String
@@ -45,8 +45,8 @@
         string : function (obj) {
             return (this.tester.call(obj) === '[object String]');
         },
-        
-        //>ExcludeStart('validation')
+
+        //<validation>
         /**
          * element
          * tests if value given is a DOM Element
@@ -90,7 +90,7 @@
         number : function (obj) {
             return (this.tester.call(obj) === '[object Number]');
         }
-        //>ExcludeEnd('validation')
+        //</validation>
     };
 
     /**
@@ -106,13 +106,13 @@
      */
     function merge(target, source) {
         var k;
-        
-        //>ExcludeStart('validation')
+
+        //<validation>
         if (!is.object(target) || !is.object(source)) {
             throw new Error('Argument given must be of type Object');
         }
-        //>ExcludeEnd('validation')
-        
+        //</validation>
+
         for (k in source) {
             if (source.hasOwnProperty(k) && !target[k]) {
                 target[k] = source[k];
@@ -165,7 +165,7 @@
      * @returns undefined
      */
     function addEvent(elm, evType, fn) {
-        //>ExcludeStart('validation')
+        //<validation>
         if (!is.element(elm)) {
             throw new Error('addEvent requires elm parameter to be a DOM Element');
         }
@@ -177,8 +177,8 @@
         if (!is.func(fn)) {
             throw new Error('addEvent requires evTtype parameter to be a Function');
         }
-        //>ExcludeEnd('validation')
-        
+        //</validation>
+
         if (elm.addEventListener) {
             elm.addEventListener(evType, fn);
         } else if (elm.attachEvent) {
@@ -198,8 +198,8 @@
      * @returns true || handler
      */
     function removeEvent(elm, evType, fn) {
-        
-        //>ExcludeStart('validation')
+
+        //<validation>
         if (!is.element(elm)) {
             throw new Error('removeEvent requires elm parameter to be a DOM Element');
         }
@@ -211,7 +211,7 @@
         if (!is.func(fn)) {
             throw new Error('removeEvent requires evTtype parameter to be a Function');
         }
-        //>ExcludeEnd('validation')
+        //</validation>
 
         if (elm.removeEventListener) {
             elm.removeEventListener(evType, fn);
@@ -258,6 +258,7 @@
      *     className    : 'visual-hasher'           // default
      *     stripesClass : 'visual-hasher-stripe'    // default
      *     appendTo     : d.getElementById('color_placeholder'),
+     *     hashFunction : MD5,
      *     onInput      : function() {
      *         console.log('A new color was typed')
      *     }
@@ -268,10 +269,13 @@
     function VisualHash(inputEl, options) {
 
         // Ensure that the function is called as a constructor
-        //>ExcludeStart('validation')
+        //<validation>
         if (!(this instanceof VisualHash)) {
             return new VisualHash(inputEl, options);
         }
+
+        // yeah... predicting a lot of people passing a jQuery object
+        if (inputEl.jquery) { inputEl = inputEl.get(0); }
 
         if (!inputEl || !is.element(inputEl)) {
             throw new Error('VisualHash constructor needs at least one argument and has to be a DOM element');
@@ -280,8 +284,8 @@
         if (options && !is.object(options)) {
             throw new Error('VisualHash requires the options parameter to be of type object');
         }
-        //>ExcludeEnd('validation')
-        
+        //</validation>
+
         this.inputEl = inputEl;
         this.options = (options) ? merge(options, this.defaults) : this.defaults;
 
@@ -332,35 +336,38 @@
 
         /**
          * toHash
-         * Given a string awkawardly converts to a Hex number
-         * @TODO Check with big numbers/strings
+         * This is not the best option maybe, but I don't think
+         * that VisualHash should have the responsability to hash a string
+         * I could implement (aka copy+paste) a MD5 or SHAx implementation
+         * but that would cause a huge increase of file size.
+         * I do accept suggestions and opinions on this matter…
+         *
+         * This function will use the given hashFunction given on the constructor
+         * or it will use any of the following functions if present
+         *
+         * Sha1 (from Chris Veness) - http://www.movable-type.co.uk/scripts/sha1.html
+         * md5 (Joseph Myers) - http://www.myersdaily.org/joseph/javascript/md5-text.html
+         * Crypto Collection (MD5, SHA1 & SHA256) - http://code.google.com/p/crypto-js/
+         *
          * @method
          * @public
          * @param {String} str String to be converted to hash
          * @returns {String} Hashed value of the given string
          */
         toHash : function (str) {
-            var output = "",
-                counter = 0,
-                convert = function (str) {
-                    return Number(parseInt(str, 16)*12345).toString(16);
-                };
 
-            //>ExcludeStart('validation')
-            if (!is.string(str)) {
-                throw new Error('toHash function must be called with a parameter of type String');
-            }
-            //>ExcludeEnd('validation')
-            
-            output += convert(str);
-
-            // Fill with trash
-            while (output.length < 40) {
-                output += convert("" + (output.charCodeAt(counter) * Math.floor(output.length/3)));
-                counter += 1;
+            if (this.options.hashFunction) {
+                return  this.options.hashFunction(str);
             }
 
-            return output;
+            if (Sha1 && is.Function(Sha1.hash)) { return Sha1.hash(str); }
+            if (md5 && isFunction(md5)) { return md5(str); }
+            if (Crypto && isObject(Crypto)) {
+                if (Crypto.MD5 && isFunction(Crypto.MD5)) { return Crypto.MD5(str); }
+                if (Crypto.SHA1 && isFunction(Crypto.SHA1)) { return Crypto.SHA1(str); }
+                if (Crypto.SHA256 && isFunction(Crypto.SHA256)) { return Crypto.MD5(str); }
+            }
+
         },
 
         /**
@@ -377,8 +384,8 @@
                 begin = 0,
                 end = size,
                 interval = size;
-                
-            //>ExcludeStart('validation')
+
+            //<validation>
             if (!is.string(str)) {
                 throw new Error('split function must be called with str parameter being of type String');
             }
@@ -390,8 +397,8 @@
             if (!is.number(chunks)) {
                 throw new Error('split function must be called with chunks parameter being of type Number');
             }
-            //>ExcludeEnd('validation')
-            
+            //</validation>
+
             while (chunks) {
                 parts.push(str.substring(begin, end));
 
@@ -418,12 +425,12 @@
          */
         fillColors : function (elements, colors) {
             var i = elements.length - 1,
-                currentStyle = "",
+                currentStyle = '',
                 currentEl,
                 splittedStyle = [],
                 splittedIdx = 0;
-            
-            //>ExcludeStart('validation')
+
+            //<validation>
             if (!is.array(elements)) {
                 throw new Error('fillColors function must be called with elements parameter being of type Array or Static Node');
             }
@@ -431,7 +438,7 @@
             if (!is.array(colors)) {
                 throw new Error('fillColors function must be called with colors parameter being of type Array');
             }
-            //>ExcludeEnd('validation')
+            //</validation>
 
             for (i; i >= 0; i -= 1) {
                 currentEl =  elements[i];
@@ -469,17 +476,17 @@
          */
         clearColors : function (elements) {
             var i = elements.length - 1,
-                currentStyle = "",
+                currentStyle = '',
                 currentEl,
                 splittedStyle = [],
                 splittedIdx = 0;
-                
-            //>ExcludeStart('validation')
+
+            //<validation>
             if (!is.array(elements)) {
                 throw new Error('clearColors function must be called with elements parameter being of type Array or Static Node');
             }
-            //>ExcludeEnd('validation')
-            
+            //</validation>
+
             for (i; i >= 0; i -= 1) {
                 currentEl = elements[i];
                 currentStyle = currentEl.getAttribute('style');
@@ -491,10 +498,10 @@
                     if (splittedIdx !== -1) {
                         // It's faster than another loop
                         // and since are just a few lines is still managable
-                        splittedStyle[splittedIdx] = "";
-                        splittedStyle[splittedIdx + 1] = "";
-                        splittedStyle[splittedIdx + 2] = "";
-                        splittedStyle[splittedIdx + 3] = "";
+                        splittedStyle[splittedIdx] = '';
+                        splittedStyle[splittedIdx + 1] = '';
+                        splittedStyle[splittedIdx + 2] = '';
+                        splittedStyle[splittedIdx + 3] = '';
                         currentEl.setAttribute('style', splittedStyle.join(''));
                     }
                 }
@@ -516,11 +523,11 @@
          */
         append : function (element) {
             if (!element) { element = this.options.appendTo; }
-            //>ExcludeStart('validation')
+            //<validation>
             if (!is.element(element)) { throw new Error('append function must be called with element parameter being of type Element or an Element must be given in the constructor options'); }
-            //>ExcludeEnd('validation')
+            //</validation>
             if (element) { element.appendChild(this.container); }
-            
+
             return this;
         },
 
@@ -536,10 +543,10 @@
         destroy : function () {
             removeEvent(this.inputEl, 'input', this.inputHandler);
             this.container.parentNode.removeChild(this.container);
-            this.container = null;
-            this.stripes = null;
-            this.inputEl = null;
-            this.options = null;
+            delete this.container;
+            delete this.stripes;
+            delete this.inputEl;
+            delete this.options;
         },
 
         /**
@@ -552,27 +559,26 @@
          * @returns undefined
          */
         inputHandler : function (evt) {
+
             var str = evt.target.value,
-                hash = "",
-                splittedHash = [];
+                hash = '',
+                splittedHash = [],
 
             if (str) {
                 hash = this.toHash(str);
                 splittedHash = this.split(hash, 6, this.options.stripes);
                 this.fillColors(this.stripes, splittedHash);
-            } else {
-                this.clearColors(this.stripes);
-            }
+            } else { this.clearColors(this.stripes); }
 
             if (this.options.onInput) {
-                this.options.onInput.call(this, splittedHash);
+                this.options.onInput.call(this, str, splittedHash);
             }
 
         }
     };
 
-    if (typeof define === "function" && define.amd) {
-        define("VisualHash", [], function () { return VisualHash; } );
+    if (typeof define === 'function' && define.amd) {
+        define('VisualHash', [], function () { return VisualHash; } );
     } else if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.exports) {
         module.exports = VisualHash;
     } else {
