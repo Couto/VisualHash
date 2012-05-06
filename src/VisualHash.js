@@ -349,12 +349,14 @@
          * @returns {String} Hashed value of the given string
          */
         toHash : function (str) {
-            /*
-            if (this.options.hashFunction) {
+
+            if ('hashFunction' in this.options && is.func(this.options.hashFunction)) {
                 return this.options.hashFunction(str);
             }
 
-            if (Sha1 && is.Function(Sha1.hash)) { return Sha1.hash(str); }
+
+
+            if (Sha1 && is.func(Sha1.hash)) { return Sha1.hash(str); }
             if (md5 && is.func(md5)) { return md5(str); }
             if (Crypto && is.object(Crypto)) {
                 if (Crypto.MD5 && is.func(Crypto.MD5)) { return Crypto.MD5(str); }
@@ -363,7 +365,7 @@
             }
 
             throw new Error('No hash implementation was found');
-            */
+
         },
 
         /**

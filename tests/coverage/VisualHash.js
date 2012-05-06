@@ -80,76 +80,85 @@ if (! _$jscoverage['VisualHash.js']) {
   _$jscoverage['VisualHash.js'][307] = 0;
   _$jscoverage['VisualHash.js'][309] = 0;
   _$jscoverage['VisualHash.js'][312] = 0;
-  _$jscoverage['VisualHash.js'][379] = 0;
-  _$jscoverage['VisualHash.js'][385] = 0;
-  _$jscoverage['VisualHash.js'][386] = 0;
-  _$jscoverage['VisualHash.js'][389] = 0;
-  _$jscoverage['VisualHash.js'][390] = 0;
-  _$jscoverage['VisualHash.js'][393] = 0;
-  _$jscoverage['VisualHash.js'][394] = 0;
-  _$jscoverage['VisualHash.js'][398] = 0;
-  _$jscoverage['VisualHash.js'][399] = 0;
+  _$jscoverage['VisualHash.js'][353] = 0;
+  _$jscoverage['VisualHash.js'][354] = 0;
+  _$jscoverage['VisualHash.js'][359] = 0;
+  _$jscoverage['VisualHash.js'][360] = 0;
+  _$jscoverage['VisualHash.js'][361] = 0;
+  _$jscoverage['VisualHash.js'][362] = 0;
+  _$jscoverage['VisualHash.js'][363] = 0;
+  _$jscoverage['VisualHash.js'][364] = 0;
+  _$jscoverage['VisualHash.js'][367] = 0;
+  _$jscoverage['VisualHash.js'][381] = 0;
+  _$jscoverage['VisualHash.js'][387] = 0;
+  _$jscoverage['VisualHash.js'][388] = 0;
+  _$jscoverage['VisualHash.js'][391] = 0;
+  _$jscoverage['VisualHash.js'][392] = 0;
+  _$jscoverage['VisualHash.js'][395] = 0;
+  _$jscoverage['VisualHash.js'][396] = 0;
+  _$jscoverage['VisualHash.js'][400] = 0;
   _$jscoverage['VisualHash.js'][401] = 0;
-  _$jscoverage['VisualHash.js'][402] = 0;
+  _$jscoverage['VisualHash.js'][403] = 0;
   _$jscoverage['VisualHash.js'][404] = 0;
-  _$jscoverage['VisualHash.js'][407] = 0;
-  _$jscoverage['VisualHash.js'][423] = 0;
-  _$jscoverage['VisualHash.js'][430] = 0;
-  _$jscoverage['VisualHash.js'][431] = 0;
-  _$jscoverage['VisualHash.js'][434] = 0;
-  _$jscoverage['VisualHash.js'][435] = 0;
-  _$jscoverage['VisualHash.js'][439] = 0;
-  _$jscoverage['VisualHash.js'][440] = 0;
+  _$jscoverage['VisualHash.js'][406] = 0;
+  _$jscoverage['VisualHash.js'][409] = 0;
+  _$jscoverage['VisualHash.js'][425] = 0;
+  _$jscoverage['VisualHash.js'][432] = 0;
+  _$jscoverage['VisualHash.js'][433] = 0;
+  _$jscoverage['VisualHash.js'][436] = 0;
+  _$jscoverage['VisualHash.js'][437] = 0;
   _$jscoverage['VisualHash.js'][441] = 0;
+  _$jscoverage['VisualHash.js'][442] = 0;
   _$jscoverage['VisualHash.js'][443] = 0;
-  _$jscoverage['VisualHash.js'][444] = 0;
   _$jscoverage['VisualHash.js'][445] = 0;
+  _$jscoverage['VisualHash.js'][446] = 0;
   _$jscoverage['VisualHash.js'][447] = 0;
-  _$jscoverage['VisualHash.js'][448] = 0;
+  _$jscoverage['VisualHash.js'][449] = 0;
   _$jscoverage['VisualHash.js'][450] = 0;
-  _$jscoverage['VisualHash.js'][453] = 0;
+  _$jscoverage['VisualHash.js'][452] = 0;
   _$jscoverage['VisualHash.js'][455] = 0;
-  _$jscoverage['VisualHash.js'][459] = 0;
-  _$jscoverage['VisualHash.js'][474] = 0;
-  _$jscoverage['VisualHash.js'][481] = 0;
-  _$jscoverage['VisualHash.js'][482] = 0;
-  _$jscoverage['VisualHash.js'][486] = 0;
-  _$jscoverage['VisualHash.js'][487] = 0;
+  _$jscoverage['VisualHash.js'][457] = 0;
+  _$jscoverage['VisualHash.js'][461] = 0;
+  _$jscoverage['VisualHash.js'][476] = 0;
+  _$jscoverage['VisualHash.js'][483] = 0;
+  _$jscoverage['VisualHash.js'][484] = 0;
   _$jscoverage['VisualHash.js'][488] = 0;
+  _$jscoverage['VisualHash.js'][489] = 0;
   _$jscoverage['VisualHash.js'][490] = 0;
-  _$jscoverage['VisualHash.js'][491] = 0;
   _$jscoverage['VisualHash.js'][492] = 0;
+  _$jscoverage['VisualHash.js'][493] = 0;
   _$jscoverage['VisualHash.js'][494] = 0;
-  _$jscoverage['VisualHash.js'][497] = 0;
-  _$jscoverage['VisualHash.js'][498] = 0;
+  _$jscoverage['VisualHash.js'][496] = 0;
   _$jscoverage['VisualHash.js'][499] = 0;
   _$jscoverage['VisualHash.js'][500] = 0;
   _$jscoverage['VisualHash.js'][501] = 0;
-  _$jscoverage['VisualHash.js'][506] = 0;
-  _$jscoverage['VisualHash.js'][521] = 0;
+  _$jscoverage['VisualHash.js'][502] = 0;
+  _$jscoverage['VisualHash.js'][503] = 0;
+  _$jscoverage['VisualHash.js'][508] = 0;
   _$jscoverage['VisualHash.js'][523] = 0;
   _$jscoverage['VisualHash.js'][525] = 0;
   _$jscoverage['VisualHash.js'][527] = 0;
-  _$jscoverage['VisualHash.js'][540] = 0;
-  _$jscoverage['VisualHash.js'][541] = 0;
+  _$jscoverage['VisualHash.js'][529] = 0;
   _$jscoverage['VisualHash.js'][542] = 0;
   _$jscoverage['VisualHash.js'][543] = 0;
   _$jscoverage['VisualHash.js'][544] = 0;
   _$jscoverage['VisualHash.js'][545] = 0;
-  _$jscoverage['VisualHash.js'][559] = 0;
-  _$jscoverage['VisualHash.js'][563] = 0;
-  _$jscoverage['VisualHash.js'][564] = 0;
+  _$jscoverage['VisualHash.js'][546] = 0;
+  _$jscoverage['VisualHash.js'][547] = 0;
+  _$jscoverage['VisualHash.js'][561] = 0;
   _$jscoverage['VisualHash.js'][565] = 0;
   _$jscoverage['VisualHash.js'][566] = 0;
   _$jscoverage['VisualHash.js'][567] = 0;
+  _$jscoverage['VisualHash.js'][568] = 0;
   _$jscoverage['VisualHash.js'][569] = 0;
-  _$jscoverage['VisualHash.js'][570] = 0;
-  _$jscoverage['VisualHash.js'][576] = 0;
-  _$jscoverage['VisualHash.js'][577] = 0;
+  _$jscoverage['VisualHash.js'][571] = 0;
+  _$jscoverage['VisualHash.js'][572] = 0;
   _$jscoverage['VisualHash.js'][578] = 0;
   _$jscoverage['VisualHash.js'][579] = 0;
+  _$jscoverage['VisualHash.js'][580] = 0;
   _$jscoverage['VisualHash.js'][581] = 0;
-  _$jscoverage['VisualHash.js'][584] = 0;
+  _$jscoverage['VisualHash.js'][583] = 0;
+  _$jscoverage['VisualHash.js'][586] = 0;
 }
 _$jscoverage['VisualHash.js'][14]++;
 (function (w, d) {
@@ -362,191 +371,226 @@ _$jscoverage['VisualHash.js'][14]++;
 }
   _$jscoverage['VisualHash.js'][312]++;
   VisualHash.prototype = {constructor: VisualHash, defaults: {"stripes": 3, "appendTo": d.body, "className": "visual-hasher", "stripesClass": "visual-hasher-stripe"}, toHash: (function (str) {
+  _$jscoverage['VisualHash.js'][353]++;
+  if ("hashFunction" in this.options && is.func(this.options.hashFunction)) {
+    _$jscoverage['VisualHash.js'][354]++;
+    return this.options.hashFunction(str);
+  }
+  _$jscoverage['VisualHash.js'][359]++;
+  if (Sha1 && is.func(Sha1.hash)) {
+    _$jscoverage['VisualHash.js'][359]++;
+    return Sha1.hash(str);
+  }
+  _$jscoverage['VisualHash.js'][360]++;
+  if (md5 && is.func(md5)) {
+    _$jscoverage['VisualHash.js'][360]++;
+    return md5(str);
+  }
+  _$jscoverage['VisualHash.js'][361]++;
+  if (Crypto && is.object(Crypto)) {
+    _$jscoverage['VisualHash.js'][362]++;
+    if (Crypto.MD5 && is.func(Crypto.MD5)) {
+      _$jscoverage['VisualHash.js'][362]++;
+      return Crypto.MD5(str);
+    }
+    _$jscoverage['VisualHash.js'][363]++;
+    if (Crypto.SHA1 && is.func(Crypto.SHA1)) {
+      _$jscoverage['VisualHash.js'][363]++;
+      return Crypto.SHA1(str);
+    }
+    _$jscoverage['VisualHash.js'][364]++;
+    if (Crypto.SHA256 && is.func(Crypto.SHA256)) {
+      _$jscoverage['VisualHash.js'][364]++;
+      return Crypto.MD5(str);
+    }
+  }
+  _$jscoverage['VisualHash.js'][367]++;
+  throw new Error("No hash implementation was found");
 }), split: (function (str, size, chunks) {
-  _$jscoverage['VisualHash.js'][379]++;
+  _$jscoverage['VisualHash.js'][381]++;
   var parts = [], begin = 0, end = size, interval = size;
-  _$jscoverage['VisualHash.js'][385]++;
+  _$jscoverage['VisualHash.js'][387]++;
   if (! is.string(str)) {
-    _$jscoverage['VisualHash.js'][386]++;
+    _$jscoverage['VisualHash.js'][388]++;
     throw new Error("split function must be called with str parameter being of type String");
   }
-  _$jscoverage['VisualHash.js'][389]++;
+  _$jscoverage['VisualHash.js'][391]++;
   if (! is.number(size)) {
-    _$jscoverage['VisualHash.js'][390]++;
+    _$jscoverage['VisualHash.js'][392]++;
     throw new Error("split function must be called with size parameter being of type Number");
   }
-  _$jscoverage['VisualHash.js'][393]++;
+  _$jscoverage['VisualHash.js'][395]++;
   if (! is.number(chunks)) {
-    _$jscoverage['VisualHash.js'][394]++;
+    _$jscoverage['VisualHash.js'][396]++;
     throw new Error("split function must be called with chunks parameter being of type Number");
   }
-  _$jscoverage['VisualHash.js'][398]++;
+  _$jscoverage['VisualHash.js'][400]++;
   while (chunks) {
-    _$jscoverage['VisualHash.js'][399]++;
-    parts.push(str.substring(begin, end));
     _$jscoverage['VisualHash.js'][401]++;
+    parts.push(str.substring(begin, end));
+    _$jscoverage['VisualHash.js'][403]++;
     begin = end + 1;
-    _$jscoverage['VisualHash.js'][402]++;
-    end = end + interval + 1;
     _$jscoverage['VisualHash.js'][404]++;
+    end = end + interval + 1;
+    _$jscoverage['VisualHash.js'][406]++;
     chunks -= 1;
 }
-  _$jscoverage['VisualHash.js'][407]++;
+  _$jscoverage['VisualHash.js'][409]++;
   return parts;
 }), fillColors: (function (elements, colors) {
-  _$jscoverage['VisualHash.js'][423]++;
+  _$jscoverage['VisualHash.js'][425]++;
   var i = elements.length - 1, currentStyle = "", currentEl, splittedStyle = [], splittedIdx = 0;
-  _$jscoverage['VisualHash.js'][430]++;
+  _$jscoverage['VisualHash.js'][432]++;
   if (! is.array(elements)) {
-    _$jscoverage['VisualHash.js'][431]++;
+    _$jscoverage['VisualHash.js'][433]++;
     throw new Error("fillColors function must be called with elements parameter being of type Array or Static Node");
   }
-  _$jscoverage['VisualHash.js'][434]++;
+  _$jscoverage['VisualHash.js'][436]++;
   if (! is.array(colors)) {
-    _$jscoverage['VisualHash.js'][435]++;
+    _$jscoverage['VisualHash.js'][437]++;
     throw new Error("fillColors function must be called with colors parameter being of type Array");
   }
-  _$jscoverage['VisualHash.js'][439]++;
+  _$jscoverage['VisualHash.js'][441]++;
   for (i; i >= 0; i -= 1) {
-    _$jscoverage['VisualHash.js'][440]++;
+    _$jscoverage['VisualHash.js'][442]++;
     currentEl = elements[i];
-    _$jscoverage['VisualHash.js'][441]++;
-    currentStyle = currentEl.getAttribute("style");
     _$jscoverage['VisualHash.js'][443]++;
+    currentStyle = currentEl.getAttribute("style");
+    _$jscoverage['VisualHash.js'][445]++;
     if (currentStyle) {
-      _$jscoverage['VisualHash.js'][444]++;
+      _$jscoverage['VisualHash.js'][446]++;
       splittedStyle = currentStyle.split(/(\;|:)/gi);
-      _$jscoverage['VisualHash.js'][445]++;
-      splittedIdx = indexOf(splittedStyle, "background-color");
       _$jscoverage['VisualHash.js'][447]++;
+      splittedIdx = indexOf(splittedStyle, "background-color");
+      _$jscoverage['VisualHash.js'][449]++;
       if (splittedIdx !== -1) {
-        _$jscoverage['VisualHash.js'][448]++;
+        _$jscoverage['VisualHash.js'][450]++;
         splittedStyle[splittedIdx + 2] = "#" + colors[i];
       }
       else {
-        _$jscoverage['VisualHash.js'][450]++;
+        _$jscoverage['VisualHash.js'][452]++;
         splittedStyle[splittedStyle.length] = ";background-color: #" + colors[i] + ";";
       }
-      _$jscoverage['VisualHash.js'][453]++;
+      _$jscoverage['VisualHash.js'][455]++;
       currentEl.setAttribute("style", splittedStyle.join(""));
     }
     else {
-      _$jscoverage['VisualHash.js'][455]++;
+      _$jscoverage['VisualHash.js'][457]++;
       currentEl.setAttribute("style", "background-color: #" + colors[i] + ";");
     }
 }
-  _$jscoverage['VisualHash.js'][459]++;
+  _$jscoverage['VisualHash.js'][461]++;
   return this;
 }), clearColors: (function (elements) {
-  _$jscoverage['VisualHash.js'][474]++;
+  _$jscoverage['VisualHash.js'][476]++;
   var i = elements.length - 1, currentStyle = "", currentEl, splittedStyle = [], splittedIdx = 0;
-  _$jscoverage['VisualHash.js'][481]++;
+  _$jscoverage['VisualHash.js'][483]++;
   if (! is.array(elements)) {
-    _$jscoverage['VisualHash.js'][482]++;
+    _$jscoverage['VisualHash.js'][484]++;
     throw new Error("clearColors function must be called with elements parameter being of type Array or Static Node");
   }
-  _$jscoverage['VisualHash.js'][486]++;
+  _$jscoverage['VisualHash.js'][488]++;
   for (i; i >= 0; i -= 1) {
-    _$jscoverage['VisualHash.js'][487]++;
+    _$jscoverage['VisualHash.js'][489]++;
     currentEl = elements[i];
-    _$jscoverage['VisualHash.js'][488]++;
-    currentStyle = currentEl.getAttribute("style");
     _$jscoverage['VisualHash.js'][490]++;
+    currentStyle = currentEl.getAttribute("style");
+    _$jscoverage['VisualHash.js'][492]++;
     if (currentStyle) {
-      _$jscoverage['VisualHash.js'][491]++;
+      _$jscoverage['VisualHash.js'][493]++;
       splittedStyle = currentStyle.split(/(\;|:)/gi);
-      _$jscoverage['VisualHash.js'][492]++;
-      splittedIdx = indexOf(splittedStyle, "background-color");
       _$jscoverage['VisualHash.js'][494]++;
+      splittedIdx = indexOf(splittedStyle, "background-color");
+      _$jscoverage['VisualHash.js'][496]++;
       if (splittedIdx !== -1) {
-        _$jscoverage['VisualHash.js'][497]++;
-        splittedStyle[splittedIdx] = "";
-        _$jscoverage['VisualHash.js'][498]++;
-        splittedStyle[splittedIdx + 1] = "";
         _$jscoverage['VisualHash.js'][499]++;
-        splittedStyle[splittedIdx + 2] = "";
+        splittedStyle[splittedIdx] = "";
         _$jscoverage['VisualHash.js'][500]++;
-        splittedStyle[splittedIdx + 3] = "";
+        splittedStyle[splittedIdx + 1] = "";
         _$jscoverage['VisualHash.js'][501]++;
+        splittedStyle[splittedIdx + 2] = "";
+        _$jscoverage['VisualHash.js'][502]++;
+        splittedStyle[splittedIdx + 3] = "";
+        _$jscoverage['VisualHash.js'][503]++;
         currentEl.setAttribute("style", splittedStyle.join(""));
       }
     }
 }
-  _$jscoverage['VisualHash.js'][506]++;
+  _$jscoverage['VisualHash.js'][508]++;
   return this;
 }), append: (function (element) {
-  _$jscoverage['VisualHash.js'][521]++;
+  _$jscoverage['VisualHash.js'][523]++;
   if (! element) {
-    _$jscoverage['VisualHash.js'][521]++;
+    _$jscoverage['VisualHash.js'][523]++;
     element = this.options.appendTo;
   }
-  _$jscoverage['VisualHash.js'][523]++;
+  _$jscoverage['VisualHash.js'][525]++;
   if (! is.element(element)) {
-    _$jscoverage['VisualHash.js'][523]++;
+    _$jscoverage['VisualHash.js'][525]++;
     throw new Error("append function must be called with element parameter being of type Element or an Element must be given in the constructor options");
   }
-  _$jscoverage['VisualHash.js'][525]++;
+  _$jscoverage['VisualHash.js'][527]++;
   if (element) {
-    _$jscoverage['VisualHash.js'][525]++;
+    _$jscoverage['VisualHash.js'][527]++;
     element.appendChild(this.container);
   }
-  _$jscoverage['VisualHash.js'][527]++;
+  _$jscoverage['VisualHash.js'][529]++;
   return this;
 }), destroy: (function () {
-  _$jscoverage['VisualHash.js'][540]++;
-  removeEvent(this.inputEl, "input", this.inputHandler);
-  _$jscoverage['VisualHash.js'][541]++;
-  this.container.parentNode.removeChild(this.container);
   _$jscoverage['VisualHash.js'][542]++;
-  delete this.container;
+  removeEvent(this.inputEl, "input", this.inputHandler);
   _$jscoverage['VisualHash.js'][543]++;
-  delete this.stripes;
+  this.container.parentNode.removeChild(this.container);
   _$jscoverage['VisualHash.js'][544]++;
-  delete this.inputEl;
+  delete this.container;
   _$jscoverage['VisualHash.js'][545]++;
+  delete this.stripes;
+  _$jscoverage['VisualHash.js'][546]++;
+  delete this.inputEl;
+  _$jscoverage['VisualHash.js'][547]++;
   delete this.options;
 }), inputHandler: (function (evt) {
-  _$jscoverage['VisualHash.js'][559]++;
+  _$jscoverage['VisualHash.js'][561]++;
   var str = evt.target.value, hash = "", splittedHash = [];
-  _$jscoverage['VisualHash.js'][563]++;
+  _$jscoverage['VisualHash.js'][565]++;
   if (str) {
-    _$jscoverage['VisualHash.js'][564]++;
-    hash = this.toHash(str);
-    _$jscoverage['VisualHash.js'][565]++;
-    splittedHash = this.split(hash, 6, this.options.stripes);
     _$jscoverage['VisualHash.js'][566]++;
+    hash = this.toHash(str);
+    _$jscoverage['VisualHash.js'][567]++;
+    splittedHash = this.split(hash, 6, this.options.stripes);
+    _$jscoverage['VisualHash.js'][568]++;
     this.fillColors(this.stripes, splittedHash);
   }
   else {
-    _$jscoverage['VisualHash.js'][567]++;
+    _$jscoverage['VisualHash.js'][569]++;
     this.clearColors(this.stripes);
   }
-  _$jscoverage['VisualHash.js'][569]++;
+  _$jscoverage['VisualHash.js'][571]++;
   if (this.options.onInput) {
-    _$jscoverage['VisualHash.js'][570]++;
+    _$jscoverage['VisualHash.js'][572]++;
     this.options.onInput.call(this, str, splittedHash);
   }
 })};
-  _$jscoverage['VisualHash.js'][576]++;
+  _$jscoverage['VisualHash.js'][578]++;
   if (typeof define === "function" && define.amd) {
-    _$jscoverage['VisualHash.js'][577]++;
+    _$jscoverage['VisualHash.js'][579]++;
     define("VisualHash", [], (function () {
-  _$jscoverage['VisualHash.js'][577]++;
+  _$jscoverage['VisualHash.js'][579]++;
   return VisualHash;
 }));
   }
   else {
-    _$jscoverage['VisualHash.js'][578]++;
+    _$jscoverage['VisualHash.js'][580]++;
     if (typeof module !== "undefined" && typeof exports !== "undefined" && module.exports) {
-      _$jscoverage['VisualHash.js'][579]++;
+      _$jscoverage['VisualHash.js'][581]++;
       module.exports = VisualHash;
     }
     else {
-      _$jscoverage['VisualHash.js'][581]++;
+      _$jscoverage['VisualHash.js'][583]++;
       w.VisualHash = VisualHash;
     }
   }
-  _$jscoverage['VisualHash.js'][584]++;
+  _$jscoverage['VisualHash.js'][586]++;
   return VisualHash;
 })(window, document);
-_$jscoverage['VisualHash.js'].source = ["/*jslint browser: true, indent: 4 */","/*global Sha1, md5, Crypto, module, exports, define*/","","/*!"," * VisualHash"," *"," * @author Luis Couto"," * @organization 15minuteslate.net"," * @contact couto@15minuteslate.net"," * @version 0.0.1"," *"," * @license 2012 - MIT (http://couto.mit-license.org/)"," */","(function (w, d) {","","    'use strict';","","    /**","     * is - a Set of validation functions","     *","     * @class","     * @private","     */","    var is = {","        tester : Object.prototype.toString,","","        /**","         * func","         * tests if value given is Function","         *","         * @static","         * @param {String|Object|Array|Boolean|Number} obj","         * @returns Boolean","         */","        func : function (obj) {","            return (this.tester.call(obj) === '[object Function]');","        },","","        /**","         * string","         * tests if value given is String","         *","         * @static","         * @param {String|Object|Array|Boolean|Number} obj","         * @returns Boolean","         */","        string : function (obj) {","            return (this.tester.call(obj) === '[object String]');","        },","","        //&lt;validation&gt;","        /**","         * element","         * tests if value given is a DOM Element","         *","         * @static","         * @param {String|Object|Array|Boolean|Number} obj","         * @returns Boolean","         */","        element : function (obj) { return !!(obj &amp;&amp; obj.nodeType === 1); },","","        /**","         * object","         * tests if value given is Object","         *","         * @static","         * @param {String|Object|Array|Boolean|Number} obj","         * @returns Boolean","         */","        object : function (obj) {","            return this.tester.call(obj) === '[object Object]';","        },","","        /**","         * array","         * tests if value given is Array","         *","         * @static","         * @param {String|Object|Array|Boolean|Number} obj","         * @returns Boolean","         */","        array : function (obj) {","            return (this.tester.call(obj) === '[object Array]');","        },","","        /**","         * number","         * tests if value given is Number","         *","         * @static","         * @param {String|Object|Array|Boolean|Number} obj","         * @returns Boolean","         */","        number : function (obj) {","            return (this.tester.call(obj) === '[object Number]');","        }","        //&lt;/validation&gt;","    };","","    /**","     * merge","     * Merges to objects into one.","     * Doesn't overwrite existing properties","     * Changes apply directly to target object.","     *","     * @private","     * @param {Object} target Object that will receive the new properties","     * @param {Object} source Object that will give its properties","     * @returns Object","     */","    function merge(target, source) {","        var k;","","        //&lt;validation&gt;","        if (!is.object(target) || !is.object(source)) {","            throw new Error('Argument given must be of type Object');","        }","        //&lt;/validation&gt;","","        for (k in source) {","            if (source.hasOwnProperty(k) &amp;&amp; !target[k]) {","                target[k] = source[k];","            }","        }","","        return target;","    }","","    /**","     * bind","     * Fixes the context for the given function","     *","     * @private","     * @param {Function} fn function whom context will be fixed","     * @param {Object} context object that will serve as context","     * @returns a function with the given context","     */","    function bind(fn, context) {","        var slice = Array.prototype.slice,","            args;","","        if (!is.func(fn)) {","            return undefined;","        }","","        args = slice.call(arguments, 2);","        return function () {","            return fn.apply(context, args.concat(slice.call(arguments)));","        };","    }","    /**","     * addEvent","     * cross-browser addEvent function","     *","     * @private","     * @param {DOM Elment} elm DOM Element to attach the event listener","     * @param {String} evType event name that it's going to be attached","     * @param {Function} fn Function that will serve as callback","     * @returns undefined","     */","    function addEvent(elm, evType, fn) {","        //&lt;validation&gt;","        if (!is.element(elm)) {","            throw new Error('addEvent requires elm parameter to be a DOM Element');","        }","","        if (!is.string(evType)) {","            throw new Error('addEvent requires evTtype parameter to be a String');","        }","","        if (!is.func(fn)) {","            throw new Error('addEvent requires evTtype parameter to be a Function');","        }","        //&lt;/validation&gt;","","        if (elm.addEventListener) {","            elm.addEventListener(evType, fn);","        } else if (elm.attachEvent) {","            elm.attachEvent('on' + evType);","        } else {","            elm['on' + evType] = fn;","        }","    }","    /**","     * removeEvent","     * cross-browser removeEvent function","     *","     * @private","     * @param {DOM Elment} elm DOM Element that has the listener attached","     * @param {String} evType event name that was attached","     * @param {Function} fn Function that served as callback","     * @returns true || handler","     */","    function removeEvent(elm, evType, fn) {","","        //&lt;validation&gt;","        if (!is.element(elm)) {","            throw new Error('removeEvent requires elm parameter to be a DOM Element');","        }","","        if (!is.string(evType)) {","            throw new Error('removeEvent requires evTtype parameter to be a String');","        }","","        if (!is.func(fn)) {","            throw new Error('removeEvent requires evTtype parameter to be a Function');","        }","        //&lt;/validation&gt;","","        if (elm.removeEventListener) {","            elm.removeEventListener(evType, fn);","        } else if (elm.detachEvent) {","            elm.detachEvent('on' + evType, fn);","        } else {","            elm['on' + evType] = null;","        }","    }","","    /**","     * indexOf","     * given an array, it will search for the string value.","     * if the browser supports indexOf on arrays it will use the browser version","     * instead","     *","     * @public","     * @param {Array} arr Array where to find the string","     * @param {String|Number|Boolean} val value to search for","     * @returns -1 if not found, index position otherwise","     */","    function indexOf(arr, val) {","        var i = arr.length - 1;","","        if (Array.prototype.indexOf) { return arr.indexOf(val); }","","        for (i; i &gt;= 0; i -= 1) { if (arr[i] === val) { return i; } }","","        return -1;","    }","","    /**","     * VisualHash","     *","     * @class","     * @param  {DOM element} inputEl inputElement","     * @param  {Object} options","     * @return {Object} VisualHash instance","     *","     * @example","     *","     * var coloredhash = new VisualHash(d.querySelectorAll('input')[0], {","     *     stripes      : 3,                        // default","     *     className    : 'visual-hasher'           // default","     *     stripesClass : 'visual-hasher-stripe'    // default","     *     appendTo     : d.getElementById('color_placeholder'),","     *     hashFunction : MD5,","     *     onInput      : function() {","     *         console.log('A new color was typed')","     *     }","     * });","     *","     * coloredhash.destroy();","     */","    function VisualHash(inputEl, options) {","","        // Ensure that the function is called as a constructor","        //&lt;validation&gt;","        if (!(this instanceof VisualHash)) {","            return new VisualHash(inputEl, options);","        }","","        // yeah... predicting a lot of people passing a jQuery object","        if (inputEl &amp;&amp; inputEl.jquery) { inputEl = inputEl.get(0); }","","        if (!inputEl || !is.element(inputEl)) {","            throw new Error('VisualHash constructor needs at least one argument and has to be a DOM element');","        }","","        if (options &amp;&amp; !is.object(options)) {","            throw new Error('VisualHash requires the options parameter to be of type object');","        }","        //&lt;/validation&gt;","","        this.inputEl = inputEl;","        this.options = (options) ? merge(options, this.defaults) : this.defaults;","","        this.container = d.createElement('div');","        this.container.setAttribute('class', this.options.className);","","        this.stripes = (function (placeholder, size, className) {","            var stripes = [],","                stripe;","","            while (size) {","                stripe = d.createElement('div');","                stripe.setAttribute('class', className + ' stripe-' + size);","                stripes.push(stripe);","                placeholder.appendChild(stripe);","","                size -= 1;","            }","","            return stripes;","","        }(this.container, this.options.stripes, this.options.stripesClass));","","        this.inputHandler = bind(this.inputHandler, this);","        addEvent(this.inputEl, 'input', this.inputHandler);","","        if (this.options.appendTo) { this.append(); }","    }","","    VisualHash.prototype = {","","        /**","         * @constructor","         * Set the constructor property back to the correct Function","         */","        constructor : VisualHash,","","        /**","         * @property {Object} defaults","         * @readonly","         */","        defaults : {","            'stripes'       : 3,","            'appendTo'      : d.body,","            'className'     : 'visual-hasher',","            'stripesClass'  : 'visual-hasher-stripe'","        },","","        /**","         * toHash","         * This is not the best option maybe, but I don't think","         * that VisualHash should have the responsability to hash a string","         * I could implement (aka copy+paste) a MD5 or SHAx implementation","         * but that would cause a huge increase of file size.","         * I do accept suggestions and opinions on this matter&#226;&#128;&#166;","         *","         * This function will use the given hashFunction given on the constructor","         * or it will use any of the following functions if present","         *","         * Sha1 (from Chris Veness) - http://www.movable-type.co.uk/scripts/sha1.html","         * md5 (Joseph Myers) - http://www.myersdaily.org/joseph/javascript/md5-text.html","         * Crypto Collection (MD5, SHA1 &amp; SHA256) - http://code.google.com/p/crypto-js/","         *","         * @method","         * @public","         * @param {String} str String to be converted to hash","         * @returns {String} Hashed value of the given string","         */","        toHash : function (str) {","            /*","            if (this.options.hashFunction) {","                return this.options.hashFunction(str);","            }","","            if (Sha1 &amp;&amp; is.Function(Sha1.hash)) { return Sha1.hash(str); }","            if (md5 &amp;&amp; is.func(md5)) { return md5(str); }","            if (Crypto &amp;&amp; is.object(Crypto)) {","                if (Crypto.MD5 &amp;&amp; is.func(Crypto.MD5)) { return Crypto.MD5(str); }","                if (Crypto.SHA1 &amp;&amp; is.func(Crypto.SHA1)) { return Crypto.SHA1(str); }","                if (Crypto.SHA256 &amp;&amp; is.func(Crypto.SHA256)) { return Crypto.MD5(str); }","            }","","            throw new Error('No hash implementation was found');","            */","        },","","        /**","         * split","         * Given a string it, will split in the given amount of chunks with the given size","         *","         * @method","         * @public","         * @param {String} str String to be splitted","         * @returns {Array} Array with the splitted string","         */","        split : function (str, size, chunks) {","            var parts = [],","                begin = 0,","                end = size,","                interval = size;","","            //&lt;validation&gt;","            if (!is.string(str)) {","                throw new Error('split function must be called with str parameter being of type String');","            }","","            if (!is.number(size)) {","                throw new Error('split function must be called with size parameter being of type Number');","            }","","            if (!is.number(chunks)) {","                throw new Error('split function must be called with chunks parameter being of type Number');","            }","            //&lt;/validation&gt;","","            while (chunks) {","                parts.push(str.substring(begin, end));","","                begin = end + 1;","                end = end + interval + 1;","","                chunks -= 1;","            }","","            return parts;","        },","","        /**","         * fillColors","         * Given an array or array-like of elements and an array of colors,","         * it will set the background-color of each elements with the","         * respective color.","         *","         * @method","         * @public","         * @param {Array} elements Array of node Elements","         * @param {Array} colors Array of colors","         * @returns VisualHash instance (this)","         */","        fillColors : function (elements, colors) {","            var i = elements.length - 1,","                currentStyle = '',","                currentEl,","                splittedStyle = [],","                splittedIdx = 0;","","            //&lt;validation&gt;","            if (!is.array(elements)) {","                throw new Error('fillColors function must be called with elements parameter being of type Array or Static Node');","            }","","            if (!is.array(colors)) {","                throw new Error('fillColors function must be called with colors parameter being of type Array');","            }","            //&lt;/validation&gt;","","            for (i; i &gt;= 0; i -= 1) {","                currentEl =  elements[i];","                currentStyle = currentEl.getAttribute('style');","","                if (currentStyle) {","                    splittedStyle = currentStyle.split(/(\\;|:)/gi);","                    splittedIdx = indexOf(splittedStyle, 'background-color');","","                    if (splittedIdx !== -1) {","                        splittedStyle[splittedIdx + 2] = '#' + colors[i];","                    } else {","                        splittedStyle[splittedStyle.length] = ';background-color: #' + colors[i] + ';';","                    }","","                    currentEl.setAttribute('style', splittedStyle.join(''));","                } else {","                    currentEl.setAttribute('style', 'background-color: #' + colors[i] + ';');","                }","            }","","            return this;","","        },","","        /**","         * clearColors","         * Given an array or array-like of elements it will remove the","         * background-color property of the its style attribute","         *","         * @method","         * @public","         * @param {Array} elements Array of node Elements","         * @returns VisualHash instance (this)","         */","        clearColors : function (elements) {","            var i = elements.length - 1,","                currentStyle = '',","                currentEl,","                splittedStyle = [],","                splittedIdx = 0;","","            //&lt;validation&gt;","            if (!is.array(elements)) {","                throw new Error('clearColors function must be called with elements parameter being of type Array or Static Node');","            }","            //&lt;/validation&gt;","","            for (i; i &gt;= 0; i -= 1) {","                currentEl = elements[i];","                currentStyle = currentEl.getAttribute('style');","","                if (currentStyle) {","                    splittedStyle = currentStyle.split(/(\\;|:)/gi);","                    splittedIdx = indexOf(splittedStyle, 'background-color');","","                    if (splittedIdx !== -1) {","                        // It's faster than another loop","                        // and since are just a few lines is still managable","                        splittedStyle[splittedIdx] = '';","                        splittedStyle[splittedIdx + 1] = '';","                        splittedStyle[splittedIdx + 2] = '';","                        splittedStyle[splittedIdx + 3] = '';","                        currentEl.setAttribute('style', splittedStyle.join(''));","                    }","                }","            }","","            return this;","        },","","        /**","         * append","         * Appends the VisualHash element inside the given element, if no element","         * is given it fallbacks to the options property (that ultimately gets","         * its value from the defaults property)","         *","         * @method","         * @public","         * @param {DOM Element} element Element where the VisualHash will be appended","         * @returns VisualHash instance (this)","         */","        append : function (element) {","            if (!element) { element = this.options.appendTo; }","            //&lt;validation&gt;","            if (!is.element(element)) { throw new Error('append function must be called with element parameter being of type Element or an Element must be given in the constructor options'); }","            //&lt;/validation&gt;","            if (element) { element.appendChild(this.container); }","","            return this;","        },","","        /**","         * destroy","         * Removes all event listeners used by the VisualHash, and removes the","         * DOM element created","         *","         * @method","         * @public","         * @returns undefined","         */","        destroy : function () {","            removeEvent(this.inputEl, 'input', this.inputHandler);","            this.container.parentNode.removeChild(this.container);","            delete this.container;","            delete this.stripes;","            delete this.inputEl;","            delete this.options;","        },","","        /**","         * inputHandler","         * Handler used when a new input is given in the inputbox","         * Calls the onInput handler if given","         *","         * @method","         * @protected","         * @returns undefined","         */","        inputHandler : function (evt) {","","            var str = evt.target.value,","                hash = '',","                splittedHash = [];","","            if (str) {","                hash = this.toHash(str);","                splittedHash = this.split(hash, 6, this.options.stripes);","                this.fillColors(this.stripes, splittedHash);","            } else { this.clearColors(this.stripes); }","","            if (this.options.onInput) {","                this.options.onInput.call(this, str, splittedHash);","            }","","        }","    };","","    if (typeof define === 'function' &amp;&amp; define.amd) {","        define('VisualHash', [], function () { return VisualHash; });","    } else if (typeof module !== 'undefined' &amp;&amp; typeof exports !== 'undefined' &amp;&amp; module.exports) {","        module.exports = VisualHash;","    } else {","        w.VisualHash = VisualHash;","    }","","    return VisualHash;","","}(window, document));"];
+_$jscoverage['VisualHash.js'].source = ["/*jslint browser: true, indent: 4 */","/*global Sha1, md5, Crypto, module, exports, define*/","","/*!"," * VisualHash"," *"," * @author Luis Couto"," * @organization 15minuteslate.net"," * @contact couto@15minuteslate.net"," * @version 0.0.1"," *"," * @license 2012 - MIT (http://couto.mit-license.org/)"," */","(function (w, d) {","","    'use strict';","","    /**","     * is - a Set of validation functions","     *","     * @class","     * @private","     */","    var is = {","        tester : Object.prototype.toString,","","        /**","         * func","         * tests if value given is Function","         *","         * @static","         * @param {String|Object|Array|Boolean|Number} obj","         * @returns Boolean","         */","        func : function (obj) {","            return (this.tester.call(obj) === '[object Function]');","        },","","        /**","         * string","         * tests if value given is String","         *","         * @static","         * @param {String|Object|Array|Boolean|Number} obj","         * @returns Boolean","         */","        string : function (obj) {","            return (this.tester.call(obj) === '[object String]');","        },","","        //&lt;validation&gt;","        /**","         * element","         * tests if value given is a DOM Element","         *","         * @static","         * @param {String|Object|Array|Boolean|Number} obj","         * @returns Boolean","         */","        element : function (obj) { return !!(obj &amp;&amp; obj.nodeType === 1); },","","        /**","         * object","         * tests if value given is Object","         *","         * @static","         * @param {String|Object|Array|Boolean|Number} obj","         * @returns Boolean","         */","        object : function (obj) {","            return this.tester.call(obj) === '[object Object]';","        },","","        /**","         * array","         * tests if value given is Array","         *","         * @static","         * @param {String|Object|Array|Boolean|Number} obj","         * @returns Boolean","         */","        array : function (obj) {","            return (this.tester.call(obj) === '[object Array]');","        },","","        /**","         * number","         * tests if value given is Number","         *","         * @static","         * @param {String|Object|Array|Boolean|Number} obj","         * @returns Boolean","         */","        number : function (obj) {","            return (this.tester.call(obj) === '[object Number]');","        }","        //&lt;/validation&gt;","    };","","    /**","     * merge","     * Merges to objects into one.","     * Doesn't overwrite existing properties","     * Changes apply directly to target object.","     *","     * @private","     * @param {Object} target Object that will receive the new properties","     * @param {Object} source Object that will give its properties","     * @returns Object","     */","    function merge(target, source) {","        var k;","","        //&lt;validation&gt;","        if (!is.object(target) || !is.object(source)) {","            throw new Error('Argument given must be of type Object');","        }","        //&lt;/validation&gt;","","        for (k in source) {","            if (source.hasOwnProperty(k) &amp;&amp; !target[k]) {","                target[k] = source[k];","            }","        }","","        return target;","    }","","    /**","     * bind","     * Fixes the context for the given function","     *","     * @private","     * @param {Function} fn function whom context will be fixed","     * @param {Object} context object that will serve as context","     * @returns a function with the given context","     */","    function bind(fn, context) {","        var slice = Array.prototype.slice,","            args;","","        if (!is.func(fn)) {","            return undefined;","        }","","        args = slice.call(arguments, 2);","        return function () {","            return fn.apply(context, args.concat(slice.call(arguments)));","        };","    }","    /**","     * addEvent","     * cross-browser addEvent function","     *","     * @private","     * @param {DOM Elment} elm DOM Element to attach the event listener","     * @param {String} evType event name that it's going to be attached","     * @param {Function} fn Function that will serve as callback","     * @returns undefined","     */","    function addEvent(elm, evType, fn) {","        //&lt;validation&gt;","        if (!is.element(elm)) {","            throw new Error('addEvent requires elm parameter to be a DOM Element');","        }","","        if (!is.string(evType)) {","            throw new Error('addEvent requires evTtype parameter to be a String');","        }","","        if (!is.func(fn)) {","            throw new Error('addEvent requires evTtype parameter to be a Function');","        }","        //&lt;/validation&gt;","","        if (elm.addEventListener) {","            elm.addEventListener(evType, fn);","        } else if (elm.attachEvent) {","            elm.attachEvent('on' + evType);","        } else {","            elm['on' + evType] = fn;","        }","    }","    /**","     * removeEvent","     * cross-browser removeEvent function","     *","     * @private","     * @param {DOM Elment} elm DOM Element that has the listener attached","     * @param {String} evType event name that was attached","     * @param {Function} fn Function that served as callback","     * @returns true || handler","     */","    function removeEvent(elm, evType, fn) {","","        //&lt;validation&gt;","        if (!is.element(elm)) {","            throw new Error('removeEvent requires elm parameter to be a DOM Element');","        }","","        if (!is.string(evType)) {","            throw new Error('removeEvent requires evTtype parameter to be a String');","        }","","        if (!is.func(fn)) {","            throw new Error('removeEvent requires evTtype parameter to be a Function');","        }","        //&lt;/validation&gt;","","        if (elm.removeEventListener) {","            elm.removeEventListener(evType, fn);","        } else if (elm.detachEvent) {","            elm.detachEvent('on' + evType, fn);","        } else {","            elm['on' + evType] = null;","        }","    }","","    /**","     * indexOf","     * given an array, it will search for the string value.","     * if the browser supports indexOf on arrays it will use the browser version","     * instead","     *","     * @public","     * @param {Array} arr Array where to find the string","     * @param {String|Number|Boolean} val value to search for","     * @returns -1 if not found, index position otherwise","     */","    function indexOf(arr, val) {","        var i = arr.length - 1;","","        if (Array.prototype.indexOf) { return arr.indexOf(val); }","","        for (i; i &gt;= 0; i -= 1) { if (arr[i] === val) { return i; } }","","        return -1;","    }","","    /**","     * VisualHash","     *","     * @class","     * @param  {DOM element} inputEl inputElement","     * @param  {Object} options","     * @return {Object} VisualHash instance","     *","     * @example","     *","     * var coloredhash = new VisualHash(d.querySelectorAll('input')[0], {","     *     stripes      : 3,                        // default","     *     className    : 'visual-hasher'           // default","     *     stripesClass : 'visual-hasher-stripe'    // default","     *     appendTo     : d.getElementById('color_placeholder'),","     *     hashFunction : MD5,","     *     onInput      : function() {","     *         console.log('A new color was typed')","     *     }","     * });","     *","     * coloredhash.destroy();","     */","    function VisualHash(inputEl, options) {","","        // Ensure that the function is called as a constructor","        //&lt;validation&gt;","        if (!(this instanceof VisualHash)) {","            return new VisualHash(inputEl, options);","        }","","        // yeah... predicting a lot of people passing a jQuery object","        if (inputEl &amp;&amp; inputEl.jquery) { inputEl = inputEl.get(0); }","","        if (!inputEl || !is.element(inputEl)) {","            throw new Error('VisualHash constructor needs at least one argument and has to be a DOM element');","        }","","        if (options &amp;&amp; !is.object(options)) {","            throw new Error('VisualHash requires the options parameter to be of type object');","        }","        //&lt;/validation&gt;","","        this.inputEl = inputEl;","        this.options = (options) ? merge(options, this.defaults) : this.defaults;","","        this.container = d.createElement('div');","        this.container.setAttribute('class', this.options.className);","","        this.stripes = (function (placeholder, size, className) {","            var stripes = [],","                stripe;","","            while (size) {","                stripe = d.createElement('div');","                stripe.setAttribute('class', className + ' stripe-' + size);","                stripes.push(stripe);","                placeholder.appendChild(stripe);","","                size -= 1;","            }","","            return stripes;","","        }(this.container, this.options.stripes, this.options.stripesClass));","","        this.inputHandler = bind(this.inputHandler, this);","        addEvent(this.inputEl, 'input', this.inputHandler);","","        if (this.options.appendTo) { this.append(); }","    }","","    VisualHash.prototype = {","","        /**","         * @constructor","         * Set the constructor property back to the correct Function","         */","        constructor : VisualHash,","","        /**","         * @property {Object} defaults","         * @readonly","         */","        defaults : {","            'stripes'       : 3,","            'appendTo'      : d.body,","            'className'     : 'visual-hasher',","            'stripesClass'  : 'visual-hasher-stripe'","        },","","        /**","         * toHash","         * This is not the best option maybe, but I don't think","         * that VisualHash should have the responsability to hash a string","         * I could implement (aka copy+paste) a MD5 or SHAx implementation","         * but that would cause a huge increase of file size.","         * I do accept suggestions and opinions on this matter&#226;&#128;&#166;","         *","         * This function will use the given hashFunction given on the constructor","         * or it will use any of the following functions if present","         *","         * Sha1 (from Chris Veness) - http://www.movable-type.co.uk/scripts/sha1.html","         * md5 (Joseph Myers) - http://www.myersdaily.org/joseph/javascript/md5-text.html","         * Crypto Collection (MD5, SHA1 &amp; SHA256) - http://code.google.com/p/crypto-js/","         *","         * @method","         * @public","         * @param {String} str String to be converted to hash","         * @returns {String} Hashed value of the given string","         */","        toHash : function (str) {","","            if ('hashFunction' in this.options &amp;&amp; is.func(this.options.hashFunction)) {","                return this.options.hashFunction(str);","            }","","","","            if (Sha1 &amp;&amp; is.func(Sha1.hash)) { return Sha1.hash(str); }","            if (md5 &amp;&amp; is.func(md5)) { return md5(str); }","            if (Crypto &amp;&amp; is.object(Crypto)) {","                if (Crypto.MD5 &amp;&amp; is.func(Crypto.MD5)) { return Crypto.MD5(str); }","                if (Crypto.SHA1 &amp;&amp; is.func(Crypto.SHA1)) { return Crypto.SHA1(str); }","                if (Crypto.SHA256 &amp;&amp; is.func(Crypto.SHA256)) { return Crypto.MD5(str); }","            }","","            throw new Error('No hash implementation was found');","","        },","","        /**","         * split","         * Given a string it, will split in the given amount of chunks with the given size","         *","         * @method","         * @public","         * @param {String} str String to be splitted","         * @returns {Array} Array with the splitted string","         */","        split : function (str, size, chunks) {","            var parts = [],","                begin = 0,","                end = size,","                interval = size;","","            //&lt;validation&gt;","            if (!is.string(str)) {","                throw new Error('split function must be called with str parameter being of type String');","            }","","            if (!is.number(size)) {","                throw new Error('split function must be called with size parameter being of type Number');","            }","","            if (!is.number(chunks)) {","                throw new Error('split function must be called with chunks parameter being of type Number');","            }","            //&lt;/validation&gt;","","            while (chunks) {","                parts.push(str.substring(begin, end));","","                begin = end + 1;","                end = end + interval + 1;","","                chunks -= 1;","            }","","            return parts;","        },","","        /**","         * fillColors","         * Given an array or array-like of elements and an array of colors,","         * it will set the background-color of each elements with the","         * respective color.","         *","         * @method","         * @public","         * @param {Array} elements Array of node Elements","         * @param {Array} colors Array of colors","         * @returns VisualHash instance (this)","         */","        fillColors : function (elements, colors) {","            var i = elements.length - 1,","                currentStyle = '',","                currentEl,","                splittedStyle = [],","                splittedIdx = 0;","","            //&lt;validation&gt;","            if (!is.array(elements)) {","                throw new Error('fillColors function must be called with elements parameter being of type Array or Static Node');","            }","","            if (!is.array(colors)) {","                throw new Error('fillColors function must be called with colors parameter being of type Array');","            }","            //&lt;/validation&gt;","","            for (i; i &gt;= 0; i -= 1) {","                currentEl =  elements[i];","                currentStyle = currentEl.getAttribute('style');","","                if (currentStyle) {","                    splittedStyle = currentStyle.split(/(\\;|:)/gi);","                    splittedIdx = indexOf(splittedStyle, 'background-color');","","                    if (splittedIdx !== -1) {","                        splittedStyle[splittedIdx + 2] = '#' + colors[i];","                    } else {","                        splittedStyle[splittedStyle.length] = ';background-color: #' + colors[i] + ';';","                    }","","                    currentEl.setAttribute('style', splittedStyle.join(''));","                } else {","                    currentEl.setAttribute('style', 'background-color: #' + colors[i] + ';');","                }","            }","","            return this;","","        },","","        /**","         * clearColors","         * Given an array or array-like of elements it will remove the","         * background-color property of the its style attribute","         *","         * @method","         * @public","         * @param {Array} elements Array of node Elements","         * @returns VisualHash instance (this)","         */","        clearColors : function (elements) {","            var i = elements.length - 1,","                currentStyle = '',","                currentEl,","                splittedStyle = [],","                splittedIdx = 0;","","            //&lt;validation&gt;","            if (!is.array(elements)) {","                throw new Error('clearColors function must be called with elements parameter being of type Array or Static Node');","            }","            //&lt;/validation&gt;","","            for (i; i &gt;= 0; i -= 1) {","                currentEl = elements[i];","                currentStyle = currentEl.getAttribute('style');","","                if (currentStyle) {","                    splittedStyle = currentStyle.split(/(\\;|:)/gi);","                    splittedIdx = indexOf(splittedStyle, 'background-color');","","                    if (splittedIdx !== -1) {","                        // It's faster than another loop","                        // and since are just a few lines is still managable","                        splittedStyle[splittedIdx] = '';","                        splittedStyle[splittedIdx + 1] = '';","                        splittedStyle[splittedIdx + 2] = '';","                        splittedStyle[splittedIdx + 3] = '';","                        currentEl.setAttribute('style', splittedStyle.join(''));","                    }","                }","            }","","            return this;","        },","","        /**","         * append","         * Appends the VisualHash element inside the given element, if no element","         * is given it fallbacks to the options property (that ultimately gets","         * its value from the defaults property)","         *","         * @method","         * @public","         * @param {DOM Element} element Element where the VisualHash will be appended","         * @returns VisualHash instance (this)","         */","        append : function (element) {","            if (!element) { element = this.options.appendTo; }","            //&lt;validation&gt;","            if (!is.element(element)) { throw new Error('append function must be called with element parameter being of type Element or an Element must be given in the constructor options'); }","            //&lt;/validation&gt;","            if (element) { element.appendChild(this.container); }","","            return this;","        },","","        /**","         * destroy","         * Removes all event listeners used by the VisualHash, and removes the","         * DOM element created","         *","         * @method","         * @public","         * @returns undefined","         */","        destroy : function () {","            removeEvent(this.inputEl, 'input', this.inputHandler);","            this.container.parentNode.removeChild(this.container);","            delete this.container;","            delete this.stripes;","            delete this.inputEl;","            delete this.options;","        },","","        /**","         * inputHandler","         * Handler used when a new input is given in the inputbox","         * Calls the onInput handler if given","         *","         * @method","         * @protected","         * @returns undefined","         */","        inputHandler : function (evt) {","","            var str = evt.target.value,","                hash = '',","                splittedHash = [];","","            if (str) {","                hash = this.toHash(str);","                splittedHash = this.split(hash, 6, this.options.stripes);","                this.fillColors(this.stripes, splittedHash);","            } else { this.clearColors(this.stripes); }","","            if (this.options.onInput) {","                this.options.onInput.call(this, str, splittedHash);","            }","","        }","    };","","    if (typeof define === 'function' &amp;&amp; define.amd) {","        define('VisualHash', [], function () { return VisualHash; });","    } else if (typeof module !== 'undefined' &amp;&amp; typeof exports !== 'undefined' &amp;&amp; module.exports) {","        module.exports = VisualHash;","    } else {","        w.VisualHash = VisualHash;","    }","","    return VisualHash;","","}(window, document));"];
